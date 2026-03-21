@@ -4,245 +4,205 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Squeeze Project — Every Kid Deserves Summer Camp</title>
-<meta name="description" content="A kid-led charitable initiative using custom squeeze toys to send children to summer camp. 100% of profits fund camp experiences for kids who need a little extra help getting there.">
+<meta name="description" content="A kid-led charitable initiative using custom squeeze toys to send children to summer camp.">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin:0; padding:0; box-sizing:border-box; }
 :root {
-  --green:       #2e7d4f;
-  --green-light: #4caf78;
-  --green-dark:  #1a4f30;
-  --green-pale:  #e8f5ee;
-  --yellow:      #f5c842;
-  --orange:      #e8793a;
-  --cream:       #faf8f3;
-  --text:        #1e1e1e;
-  --muted:       #666;
+  --green: #2e7d4f;
+  --dark:  #1a4f30;
+  --pale:  #e8f5ee;
+  --yellow:#f5c842;
+  --orange:#e8793a;
+  --cream: #faf8f3;
+  --muted: #666;
 }
-html { scroll-behavior: smooth; }
-body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); background: #fff; }
-a { color: inherit; }
+html { scroll-behavior:smooth; }
+body { font-family:'Segoe UI',system-ui,sans-serif; color:#1e1e1e; background:#fff; text-align:center; }
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; }
 
-/* ─── NAV ─── */
+/* NAV */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  background: rgba(255,255,255,0.97); backdrop-filter: blur(8px);
-  border-bottom: 1px solid #e8f0e9;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 48px; height: 68px;
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  background:rgba(255,255,255,0.97); border-bottom:1px solid #e0ede5;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 48px; height:66px;
 }
-.nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.nav-brand img { height: 42px; border-radius: 6px; }
-.nav-brand strong { font-size: 15px; color: var(--green-dark); letter-spacing: -0.2px; }
-.nav-links { display: flex; align-items: center; gap: 32px; }
-.nav-links a { font-size: 14px; font-weight: 500; color: #555; text-decoration: none; transition: color .2s; }
-.nav-links a:hover { color: var(--green); }
-.nav-apply {
-  background: var(--green); color: #fff !important;
-  padding: 9px 22px; border-radius: 24px; font-weight: 700 !important;
-  font-size: 14px !important; transition: background .2s !important;
-}
-.nav-apply:hover { background: var(--green-dark) !important; }
+.nav-brand { display:flex; align-items:center; gap:10px; }
+.nav-brand img { height:40px; border-radius:6px; }
+.nav-brand strong { font-size:15px; color:var(--dark); }
+.nav-links { display:flex; align-items:center; gap:28px; }
+.nav-links a { font-size:14px; font-weight:500; color:#555; transition:color .2s; }
+.nav-links a:hover { color:var(--green); }
+.nav-apply { background:var(--green); color:#fff !important; padding:9px 22px; border-radius:24px; font-weight:700 !important; }
+.nav-apply:hover { background:var(--dark) !important; }
 
-/* ─── HERO ─── */
+/* HERO */
 .hero {
-  min-height: 100vh;
-  background: linear-gradient(170deg, #d4eddf 0%, #eef7ec 45%, #faf8f0 100%);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; padding: 110px 24px 80px;
-  position: relative; overflow: hidden;
+  min-height:100vh;
+  background:linear-gradient(160deg,#d4eddf 0%,#eef7ec 50%,#faf8f0 100%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:110px 24px 80px;
 }
-.hero-trees {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 120px; pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 L40,20 L80,60 L60,60 L100,0 L140,60 L120,60 L160,30 L200,60 L180,60 L220,10 L260,60 L240,60 L280,35 L320,60 L300,60 L340,15 L380,60 L360,60 L400,25 L440,60 L420,60 L460,5 L500,60 L480,60 L520,40 L560,60 L540,60 L580,20 L620,60 L600,60 L640,30 L680,60 L660,60 L700,0 L740,60 L720,60 L760,35 L800,60 L780,60 L820,15 L860,60 L840,60 L880,25 L920,60 L900,60 L940,10 L980,60 L960,60 L1000,40 L1040,60 L1020,60 L1060,20 L1100,60 L1080,60 L1120,30 L1160,60 L1140,60 L1200,5 L1200,120 L0,120 Z' fill='%232e7d4f' opacity='0.15'/%3E%3C/svg%3E") bottom/cover no-repeat;
+.badge {
+  display:inline-block; background:#fff; border:1.5px solid #c8e6d4;
+  color:var(--dark); font-size:12px; font-weight:700; letter-spacing:1px;
+  text-transform:uppercase; padding:6px 18px; border-radius:24px; margin-bottom:28px;
 }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: white; border: 1.5px solid #c8e6d4; color: var(--green-dark);
-  font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
-  padding: 6px 16px; border-radius: 24px; margin-bottom: 28px;
-  box-shadow: 0 2px 8px rgba(46,125,79,0.1);
-}
-.hero h1 {
-  font-size: clamp(40px, 6.5vw, 72px); font-weight: 900; line-height: 1.08;
-  color: var(--green-dark); letter-spacing: -1.5px; margin-bottom: 24px;
-}
-.hero h1 em { color: var(--orange); font-style: normal; }
-.hero-sub {
-  font-size: clamp(17px, 2.5vw, 21px); color: #4a6455; line-height: 1.65;
-  max-width: 580px; margin: 0 auto 40px;
-}
-.hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
-.btn { display: inline-block; text-decoration: none; border-radius: 32px; font-weight: 700; transition: all .2s; }
-.btn-green { background: var(--green); color: white; padding: 15px 34px; font-size: 16px; box-shadow: 0 4px 16px rgba(46,125,79,0.3); }
-.btn-green:hover { background: var(--green-dark); transform: translateY(-1px); }
-.btn-outline { border: 2px solid var(--green); color: var(--green); padding: 13px 28px; font-size: 15px; background: white; }
-.btn-outline:hover { background: var(--green); color: white; }
-.hero-trust { margin-top: 56px; font-size: 12px; color: #7a9a85; letter-spacing: 0.5px; position: relative; }
-.hero-trust span { font-weight: 700; color: var(--green); }
+.hero h1 { font-size:clamp(38px,6.5vw,72px); font-weight:900; line-height:1.08; color:var(--dark); letter-spacing:-2px; margin-bottom:22px; }
+.hero h1 em { color:var(--orange); font-style:normal; }
+.hero p { font-size:clamp(16px,2.5vw,20px); color:#4a6455; line-height:1.7; max-width:580px; margin:0 auto 38px; }
+.btn-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-green { background:var(--green); color:#fff; padding:15px 34px; border-radius:32px; font-weight:700; font-size:16px; box-shadow:0 4px 16px rgba(46,125,79,.3); transition:all .2s; display:inline-block; }
+.btn-green:hover { background:var(--dark); transform:translateY(-1px); }
+.btn-outline { border:2px solid var(--green); color:var(--green); padding:13px 28px; border-radius:32px; font-weight:700; font-size:15px; background:#fff; transition:all .2s; display:inline-block; }
+.btn-outline:hover { background:var(--green); color:#fff; }
+.trust { margin-top:48px; font-size:12px; color:#7a9a85; }
+.trust span { font-weight:700; color:var(--green); }
 
-/* ─── MISSION BAND ─── */
-.mission-band {
-  background: var(--green-dark); color: white;
-  padding: 48px 24px; text-align: center;
-}
-.mission-band blockquote {
-  font-size: clamp(20px, 3.5vw, 30px); font-weight: 700; line-height: 1.5;
-  max-width: 780px; margin: 0 auto;
-  font-style: italic; opacity: 0.95;
-}
-.mission-band blockquote em { color: var(--yellow); font-style: normal; }
+/* QUOTE BAND */
+.quote-band { background:var(--dark); color:#fff; padding:44px 24px; }
+.quote-band blockquote { font-size:clamp(18px,3vw,28px); font-weight:700; font-style:italic; line-height:1.5; max-width:780px; margin:0 auto; }
+.quote-band em { color:var(--yellow); font-style:normal; }
 
-/* ─── STORY ─── */
-.story { background: var(--cream); padding: 90px 24px; }
-.story .container { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.story-text .kicker { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--green); margin-bottom: 14px; }
-.story-text h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; color: var(--green-dark); line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px; }
-.story-text p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
-.story-text p strong { color: var(--green-dark); }
-.story-visual {
-  background: linear-gradient(135deg, var(--green-dark), var(--green));
-  border-radius: 20px; padding: 40px 32px; color: white; text-align: center;
-  box-shadow: 0 8px 32px rgba(46,125,79,0.25);
-}
-.story-visual .big { font-size: 64px; margin-bottom: 16px; display: block; }
-.story-visual h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
-.story-visual p { font-size: 14px; opacity: 0.85; line-height: 1.6; }
-.stat-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; justify-content: center; }
-.pill {
-  background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 24px; padding: 8px 16px; font-size: 13px; font-weight: 600;
-}
+/* GENERIC SECTION */
+.section { padding:80px 24px; }
+.section.cream { background:var(--cream); }
+.section.white { background:#fff; }
+.kicker { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--green); margin-bottom:12px; }
+.section h2 { font-size:clamp(26px,3.5vw,40px); font-weight:900; color:var(--dark); letter-spacing:-.5px; line-height:1.2; margin-bottom:14px; }
+.section .sub { font-size:16px; color:var(--muted); max-width:580px; margin:0 auto 44px; line-height:1.7; }
 
-/* ─── HOW IT WORKS ─── */
-.how { padding: 90px 24px; background: white; }
-.how .container { max-width: 960px; margin: 0 auto; }
-.section-header { text-align: center; margin-bottom: 52px; }
-section { text-align: center; }
-.story { text-align: left; }
-.section-header .kicker { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--green); margin-bottom: 12px; }
-.section-header h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; color: var(--green-dark); letter-spacing: -0.5px; line-height: 1.2; }
-.section-header p { font-size: 16px; color: var(--muted); max-width: 560px; margin: 12px auto 0; line-height: 1.7; }
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.step {
-  text-align: center; padding: 32px 20px;
-  background: var(--green-pale); border-radius: 16px;
-  border: 1.5px solid #c8e6d4; position: relative;
-}
-.step-num {
-  width: 44px; height: 44px; background: var(--green); color: white;
-  border-radius: 50%; font-size: 18px; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 16px;
-}
-.step-icon { font-size: 28px; margin-bottom: 12px; }
-.step h3 { font-size: 15px; font-weight: 700; color: var(--green-dark); margin-bottom: 8px; }
-.step p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+/* STORY — two col */
+.story-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; max-width:960px; margin:0 auto; text-align:left; }
+.story-text p { font-size:15px; color:var(--muted); line-height:1.8; margin-bottom:14px; }
+.story-text p strong { color:var(--dark); }
+.story-card { background:linear-gradient(135deg,var(--dark),var(--green)); border-radius:20px; padding:40px 32px; color:#fff; text-align:center; box-shadow:0 8px 32px rgba(46,125,79,.25); }
+.story-card .big { font-size:60px; display:block; margin-bottom:16px; }
+.story-card h3 { font-size:20px; font-weight:800; margin-bottom:10px; }
+.story-card p { font-size:14px; opacity:.85; line-height:1.6; }
+.pills { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:20px; }
+.pill { background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600; }
 
-/* ─── AMBASSADOR CTA ─── */
-.ambassador {
-  background: linear-gradient(135deg, var(--green-dark) 0%, #2e7d4f 100%);
-  padding: 90px 24px; text-align: center; color: white;
-}
-.ambassador .kicker { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--yellow); margin-bottom: 14px; }
-.ambassador h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
-.ambassador h2 em { color: var(--yellow); font-style: normal; }
-.ambassador > .container > p { font-size: 17px; opacity: 0.85; max-width: 560px; margin: 0 auto 44px; line-height: 1.7; }
-.amb-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; max-width: 860px; margin: 0 auto 44px; }
-.amb-card {
-  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 14px; padding: 24px 18px; text-align: left;
-}
-.amb-card .icon { font-size: 28px; margin-bottom: 10px; display: block; }
-.amb-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
-.amb-card p { font-size: 13px; opacity: 0.8; line-height: 1.5; }
-.btn-yellow { background: var(--yellow); color: var(--green-dark); padding: 16px 40px; font-size: 17px; font-weight: 800; border-radius: 32px; display: inline-block; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all .2s; }
-.btn-yellow:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+/* VIDEO */
+.video-wrap { max-width:720px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,.12); }
+.video-wrap video { width:100%; display:block; }
 
-/* ─── PARTNERS ─── */
-.partners { background: var(--cream); padding: 56px 24px; text-align: center; }
-.partners .kicker { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 24px; }
-.partner-logos { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
-.partner-item { font-size: 18px; font-weight: 800; color: var(--green-dark); opacity: 0.7; }
-.partner-item small { display: block; font-size: 11px; font-weight: 500; color: var(--muted); margin-top: 2px; }
+/* STEPS */
+.steps { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:960px; margin:0 auto; }
+.step { background:var(--pale); border:1.5px solid #c8e6d4; border-radius:16px; padding:28px 20px; }
+.step-num { width:42px; height:42px; background:var(--green); color:#fff; border-radius:50%; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; }
+.step-icon { font-size:26px; margin-bottom:10px; }
+.step h3 { font-size:15px; font-weight:700; color:var(--dark); margin-bottom:8px; }
+.step p { font-size:13px; color:var(--muted); line-height:1.6; }
 
-/* ─── FOOTER ─── */
-footer {
-  background: var(--green-dark); color: white; padding: 48px 24px 32px;
-  text-align: center;
-}
-footer .brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px; }
-footer .brand img { height: 38px; border-radius: 6px; opacity: 0.9; }
-footer .brand span { font-size: 17px; font-weight: 700; }
-footer .links { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-bottom: 20px; }
-footer .links a { font-size: 13px; color: rgba(255,255,255,0.65); text-decoration: none; transition: color .2s; }
-footer .links a:hover { color: var(--yellow); }
-footer .fine { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.8; }
+/* CAMPS */
+.camps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:960px; margin:0 auto; }
+.camp-card { background:var(--pale); border:1.5px solid #c8e6d4; border-radius:16px; padding:32px 24px; }
+.camp-card .icon { font-size:40px; margin-bottom:14px; }
+.camp-card h3 { font-size:19px; font-weight:800; color:var(--dark); margin-bottom:10px; }
+.camp-card p { font-size:14px; color:var(--muted); line-height:1.7; }
+.camp-tag { display:inline-block; margin-top:14px; background:var(--green); color:#fff; font-size:11px; font-weight:700; padding:4px 14px; border-radius:12px; text-transform:uppercase; letter-spacing:.5px; }
+.camp-card.alt { background:linear-gradient(135deg,#fffde7,#fff8e1); border-color:#ffe082; }
+.camp-tag.orange { background:var(--orange); }
 
-/* ─── RESPONSIVE ─── */
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .nav-links .nav-links-inner { display: none; }
-  .story .container { grid-template-columns: 1fr; gap: 36px; }
-  .steps { grid-template-columns: 1fr 1fr; }
+/* AMBASSADOR */
+.amb-section { background:linear-gradient(135deg,var(--dark),var(--green)); color:#fff; padding:80px 24px; }
+.amb-section .kicker { color:var(--yellow); }
+.amb-section h2 { color:#fff; }
+.amb-section h2 em { color:var(--yellow); font-style:normal; }
+.amb-section .sub { color:rgba(255,255,255,.85); }
+.amb-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; max-width:900px; margin:0 auto 32px; }
+.amb-card { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:14px; padding:22px 16px; }
+.amb-card .icon { font-size:28px; display:block; margin-bottom:10px; }
+.amb-card h4 { font-size:14px; font-weight:700; margin-bottom:6px; }
+.amb-card p { font-size:13px; opacity:.8; line-height:1.5; }
+.expects { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:14px; padding:28px 32px; max-width:680px; margin:0 auto 36px; text-align:left; }
+.expects h4 { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--yellow); margin-bottom:16px; }
+.expects ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.expects li { display:flex; gap:10px; font-size:14px; opacity:.9; line-height:1.6; }
+.expects li span { color:var(--yellow); font-weight:800; flex-shrink:0; }
+.btn-yellow { background:var(--yellow); color:var(--dark); padding:15px 40px; border-radius:32px; font-weight:800; font-size:17px; display:inline-block; box-shadow:0 4px 20px rgba(0,0,0,.2); transition:all .2s; }
+.btn-yellow:hover { transform:translateY(-2px); }
+
+/* PARTNERS */
+.partner-bar { background:var(--cream); padding:44px 24px; border-top:1px solid #e0ede5; }
+.partner-bar .kicker { margin-bottom:20px; }
+.partner-name { font-size:18px; font-weight:800; color:var(--dark); }
+.partner-name small { display:block; font-size:12px; font-weight:500; color:var(--muted); margin-top:2px; }
+
+/* FOOTER */
+footer { background:var(--dark); color:#fff; padding:44px 24px 28px; }
+.foot-brand { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:18px; }
+.foot-brand img { height:36px; border-radius:5px; opacity:.9; }
+.foot-brand span { font-size:17px; font-weight:700; }
+.foot-links { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:16px; }
+.foot-links a { font-size:13px; color:rgba(255,255,255,.6); transition:color .2s; }
+.foot-links a:hover { color:var(--yellow); }
+.foot-fine { font-size:12px; color:rgba(255,255,255,.35); line-height:1.8; }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  nav { padding:0 16px; }
+  .nav-brand strong { display:none; }
+  .story-grid { grid-template-columns:1fr; gap:32px; }
+  .steps { grid-template-columns:1fr 1fr; }
+  .camps-grid { grid-template-columns:1fr; }
+  .amb-cards { grid-template-columns:1fr 1fr; }
 }
-@media (max-width: 480px) {
-  .steps { grid-template-columns: 1fr; }
-  nav { padding: 0 16px; }
+@media(max-width:480px) {
+  .steps { grid-template-columns:1fr; }
+  .amb-cards { grid-template-columns:1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="/" class="nav-brand">
     <img src="logo.jpg" alt="The Squeeze Project">
     <strong>The Squeeze Project</strong>
   </a>
   <div class="nav-links">
-    <a href="#story">Our Mission</a>
+    <a href="#video">The Toy</a>
     <a href="#how">How It Works</a>
     <a href="#ambassador">Get Involved</a>
-    <a href="/donors/">Donors</a>
     <a href="/apply/" class="nav-apply">Apply Now →</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">🏕️ Kid-Led Charitable Initiative · Est. 2026</div>
+  <div class="badge">🏕️ Kid-Led Charitable Initiative · Est. 2026</div>
   <h1>Every Kid Deserves<br><em>Summer Camp.</em></h1>
-  <p class="hero-sub">We were lucky enough to go. We made lifelong friends, learned who we were, and discovered what we were capable of. Now it's our turn to give that chance to someone else.</p>
-  <div class="hero-ctas">
-    <a href="/apply/" class="btn btn-green">Become a Camp Ambassador</a>
-    <a href="#story" class="btn btn-outline">Our Story</a>
+  <p>We were lucky enough to go. We made lifelong friends, learned who we were, and discovered what we were capable of. Now it's our turn to give that chance to someone else.</p>
+  <div class="btn-row">
+    <a href="/apply/" class="btn-green">Become a Camp Ambassador</a>
+    <a href="#how" class="btn-outline">How It Works</a>
   </div>
-  <p class="hero-trust">In partnership with <span>SCOPE</span> · scopeusa.org · 501(c)(3) status pending</p>
-  <div class="hero-trees"></div>
+  <p class="trust">In partnership with <span>SCOPE</span> · scopeusa.org · 501(c)(3) status pending</p>
 </section>
 
-<!-- MISSION BAND -->
-<div class="mission-band">
+<!-- QUOTE -->
+<div class="quote-band">
   <blockquote>"Summer camp isn't just a summer. It's where kids <em>find themselves.</em> Every child deserves that chance — and we're going to make it happen."</blockquote>
 </div>
 
 <!-- STORY -->
-<section class="story" id="story">
-  <div class="container">
+<section class="section cream" id="story">
+  <div class="story-grid">
     <div class="story-text">
       <div class="kicker">Our Mission</div>
-      <h2>We know what camp gave us. Now we're paying it forward.</h2>
+      <h2 style="text-align:left;">We know what camp gave us.<br>Now we're paying it forward.</h2>
       <p>The Squeeze Project is a <strong>kid-led charitable initiative</strong> built on a simple belief: every child deserves the opportunity to experience summer camp.</p>
-      <p>We've partnered with summer camps and the national charity <strong>SCOPE</strong> to create custom, squeeze toys inspired by today's most viral kid-loved toy trend. Each toy is designed specifically for a participating camp — and every dollar of profit goes directly toward sending kids to camp.</p>
-      <p>The toys themselves? <strong>The same satisfying squish you already know and love — now custom-made for your camp.</strong> Premium slow-rise compound, built to last, and endlessly squeezable.</p>
+      <p>We've partnered with summer camps and the national charity <strong>SCOPE</strong> to create custom squeeze toys inspired by today's most viral kid-loved toy trend. Each toy is designed specifically for a participating camp — and every dollar of profit goes directly toward sending kids to camp.</p>
       <p>Our goal is simple: <strong>help as many kids as possible get to camp</strong> — now and in the future.</p>
     </div>
-    <div class="story-visual">
+    <div class="story-card">
       <span class="big">🏕️</span>
       <h3>100% of Profits</h3>
       <p>Every dollar earned from toy sales goes toward funding camp experiences for kids who need a little extra help getting there.</p>
-      <div class="stat-pills">
+      <div class="pills">
         <span class="pill">🧸 Custom Toys</span>
         <span class="pill">🌲 Real Camps</span>
         <span class="pill">💚 Real Kids</span>
@@ -252,162 +212,142 @@ footer .fine { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.8; 
   </div>
 </section>
 
-<!-- VIDEO SECTION -->
-<section style="background:white; padding:80px 24px;" id="video">
-  <div class="container" style="max-width:860px; text-align:center;">
-    <div class="kicker" style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--green); margin-bottom:12px; text-align:center;">See It In Action</div>
-    <h2 style="font-size:clamp(26px,3.5vw,38px); font-weight:800; color:var(--green-dark); margin-bottom:14px; letter-spacing:-0.5px; text-align:center;">The same satisfying squish you already know and love —<br>now custom-made for your camp.</h2>
-    <p style="font-size:16px; color:var(--muted); max-width:540px; margin:0 auto 36px; line-height:1.7; text-align:center;">Our toys are made with the same premium slow-rise compound as the world's most beloved squishy toys — endlessly squeezable, incredibly satisfying, and built to last.</p>
-    <div style="border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.12); background:#000; max-width:680px; margin:0 auto;">
-      <video controls playsinline style="width:100%; display:block;" poster="">
-        <source src="/squeeze_video.mp4" type="video/mp4">
-      </video>
-    </div>
+<!-- VIDEO -->
+<section class="section white" id="video">
+  <div class="kicker">See It In Action</div>
+  <h2>The same satisfying squish you already know and love —<br>now custom-made for your camp.</h2>
+  <p class="sub">Made with the same premium slow-rise compound as the world's most beloved squishy toys — endlessly squeezable, incredibly satisfying, and built to last.</p>
+  <div class="video-wrap">
+    <video controls playsinline>
+      <source src="/squeeze_video.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="how" id="how">
-  <div class="container" style="text-align:center;">
-    <div class="section-header">
-      <div class="kicker">How It Works</div>
-      <h2>From commitment to camp — here's the journey</h2>
-      <p>A Camp Ambassador raises $2,250, we build the toy, camps sell it, kids go to camp. Simple.</p>
+<section class="section cream" id="how">
+  <div class="kicker">How It Works</div>
+  <h2>From commitment to camp — here's the journey</h2>
+  <p class="sub">A Camp Ambassador raises $2,250, we build the toy, camps sell it, kids go to camp. Simple.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-icon">🤝</div>
+      <h3>A Camp Joins</h3>
+      <p>A camp partners with The Squeeze Project. A family commits to raising $2,250 — the one-time mold cost.</p>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-icon">🤝</div>
-        <h3>A Camp Joins</h3>
-        <p>A camp partners with The Squeeze Project. A family commits to raising $2,250 — the one-time mold cost for their custom toy.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-icon">✏️</div>
-        <h3>The Toy Is Designed</h3>
-        <p>We create a custom squeeze toy unique to the camp. The mold is made once — it can be used again and again in the future.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-icon">🛍️</div>
-        <h3>Toys Are Sold</h3>
-        <p>Sold on our website, in camp stores, and through select retailers. Every purchase directly supports the program.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-icon">⛺</div>
-        <h3>Kids Go to Camp</h3>
-        <p>100% of profits fund camp experiences for kids who need a little extra help getting there. That's the whole point.</p>
-      </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-icon">✏️</div>
+      <h3>Toy Is Designed</h3>
+      <p>We create a custom squeeze toy unique to the camp. The mold is made once and can be used again and again.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-icon">🛍️</div>
+      <h3>Toys Are Sold</h3>
+      <p>Sold on our website, in camp stores, and through select retailers. Every purchase directly supports the program.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-icon">⛺</div>
+      <h3>Kids Go to Camp</h3>
+      <p>100% of profits fund camp experiences for kids who need a little extra help getting there.</p>
     </div>
   </div>
 </section>
 
 <!-- PARTNER CAMPS -->
-<section style="background:var(--cream); padding:70px 24px;" id="camps">
-  <div class="container" style="max-width:960px; text-align:center;">
-    <div class="section-header">
-      <div class="kicker">Our Partner Camps</div>
-      <h2>Proud to be working with our first two camps</h2>
-      <p>IHC and Camp Pontiac are our founding partners. Their custom squeeze toys are in development right now.</p>
+<section class="section white" id="camps">
+  <div class="kicker">Our Partner Camps</div>
+  <h2>Proud to work with our first two camps</h2>
+  <p class="sub">IHC and Camp Pontiac are our founding partners. Their custom squeeze toys are in development right now.</p>
+  <div class="camps-grid">
+    <div class="camp-card">
+      <div class="icon">🏕️</div>
+      <h3>Camp IHC</h3>
+      <p>One of our two founding partner camps. IHC's custom squeeze toy mold is in development — a piece of camp spirit kids can take home and squeeze forever.</p>
+      <span class="camp-tag">✓ Founding Partner</span>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px;">
-      <div class="step" style="padding:32px 28px;">
-        <div style="font-size:40px; margin-bottom:14px;">🏕️</div>
-        <h3 style="font-size:20px; margin-bottom:8px;">Camp IHC</h3>
-        <p style="font-size:14px; color:var(--muted); line-height:1.7;">One of our two founding partner camps. IHC's custom squeeze toy mold is in development — a piece of camp spirit kids can take home and squeeze forever.</p>
-        <span style="display:inline-block; margin-top:14px; background:var(--green); color:white; font-size:11px; font-weight:700; padding:4px 14px; border-radius:12px; text-transform:uppercase; letter-spacing:0.5px;">✓ Founding Partner</span>
-      </div>
-      <div class="step" style="padding:32px 28px;">
-        <div style="font-size:40px; margin-bottom:14px;">🌲</div>
-        <h3 style="font-size:20px; margin-bottom:8px;">Camp Pontiac</h3>
-        <p style="font-size:14px; color:var(--muted); line-height:1.7;">Our second founding partner. Camp Pontiac's custom squeeze toy will carry the spirit of summers that stay with you for life — made to be squeezed, shared, and treasured.</p>
-        <span style="display:inline-block; margin-top:14px; background:var(--green); color:white; font-size:11px; font-weight:700; padding:4px 14px; border-radius:12px; text-transform:uppercase; letter-spacing:0.5px;">✓ Founding Partner</span>
-      </div>
-      <div class="step" style="padding:32px 28px; border-color:#ffe082; background:linear-gradient(135deg,#fffde7,#fff8e1);">
-        <div style="font-size:40px; margin-bottom:14px;">➕</div>
-        <h3 style="font-size:20px; margin-bottom:8px;">Your Camp?</h3>
-        <p style="font-size:14px; color:var(--muted); line-height:1.7;">We're partnering with new camps now. If your camp wants its own custom squeeze toy and a share of the mission, we'd love to hear from you.</p>
-        <a href="/apply/" style="display:inline-block; margin-top:14px; background:var(--orange); color:white; font-size:11px; font-weight:700; padding:4px 14px; border-radius:12px; text-transform:uppercase; letter-spacing:0.5px; text-decoration:none;">Apply Now →</a>
-      </div>
+    <div class="camp-card">
+      <div class="icon">🌲</div>
+      <h3>Camp Pontiac</h3>
+      <p>Our second founding partner. Camp Pontiac's custom squeeze toy will carry the spirit of summers that stay with you for life.</p>
+      <span class="camp-tag">✓ Founding Partner</span>
+    </div>
+    <div class="camp-card alt">
+      <div class="icon">➕</div>
+      <h3>Your Camp?</h3>
+      <p>We're partnering with new camps now. If your camp wants its own custom squeeze toy, we'd love to hear from you.</p>
+      <a href="/apply/" class="camp-tag orange">Apply Now →</a>
     </div>
   </div>
 </section>
 
-<!-- AMBASSADOR CTA -->
-<section class="ambassador" id="ambassador">
-  <div class="container">
-    <div class="kicker">Camp Ambassador Program</div>
-    <h2>Be the reason a kid<br><em>gets to go.</em></h2>
-    <p>Each Camp Ambassador commits to raising $2,250 — the exact one-time cost to create a custom mold for their camp's squeeze toy. Once it's made, it never needs to be made again.</p>
-    <div class="amb-cards">
-      <div class="amb-card">
-        <span class="icon">🎯</span>
-        <h4>Commit to the Goal</h4>
-        <p>Raise $2,250 through friends, family, and community — or cover it directly. You set the pace.</p>
-      </div>
-      <div class="amb-card">
-        <span class="icon">📣</span>
-        <h4>Spread the Word</h4>
-        <p>Share your campaign with your community. The more people who know, the more kids who go to camp.</p>
-      </div>
-      <div class="amb-card">
-        <span class="icon">✏️</span>
-        <h4>Approve the Design</h4>
-        <p>When we present your camp's toy design, we ask for your feedback and approval within 5 business days.</p>
-      </div>
-      <div class="amb-card">
-        <span class="icon">📞</span>
-        <h4>Stay in Touch</h4>
-        <p>Be available for a quick check-in during the ~6 week production process. We'll keep you posted every step.</p>
-      </div>
+<!-- AMBASSADOR -->
+<section class="amb-section" id="ambassador">
+  <div class="kicker">Camp Ambassador Program</div>
+  <h2>Be the reason a kid <em>gets to go.</em></h2>
+  <p class="sub">Each Camp Ambassador commits to raising $2,250 — the exact one-time cost to create a custom mold for their camp's squeeze toy. Once it's made, it never needs to be made again.</p>
+  <div class="amb-cards">
+    <div class="amb-card">
+      <span class="icon">🎯</span>
+      <h4>One Goal</h4>
+      <p>Raise $2,250 through friends and family — or cover it directly.</p>
     </div>
-    <!-- WHAT WE EXPECT -->
-    <div style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:16px; padding:32px; max-width:680px; margin:0 auto 40px; text-align:left;">
-      <h3 style="font-size:15px; font-weight:800; color:var(--yellow); text-transform:uppercase; letter-spacing:1px; margin-bottom:18px;">What We Ask of Our Ambassadors</h3>
-      <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:12px;">
-        <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; opacity:0.9; line-height:1.6;"><span style="color:var(--yellow); font-weight:800; flex-shrink:0;">✓</span> Commit to raising $2,250 through friends, family, and community — or cover it directly</li>
-        <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; opacity:0.9; line-height:1.6;"><span style="color:var(--yellow); font-weight:800; flex-shrink:0;">✓</span> Share your camp's campaign with your network and help spread the word</li>
-        <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; opacity:0.9; line-height:1.6;"><span style="color:var(--yellow); font-weight:800; flex-shrink:0;">✓</span> Review and approve your camp's custom toy design within 5 business days when presented</li>
-        <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; opacity:0.9; line-height:1.6;"><span style="color:var(--yellow); font-weight:800; flex-shrink:0;">✓</span> Be available for a brief check-in during the ~6-week design and production process</li>
-        <li style="display:flex; gap:12px; align-items:flex-start; font-size:14px; opacity:0.9; line-height:1.6;"><span style="color:var(--yellow); font-weight:800; flex-shrink:0;">✓</span> Ensure the full $2,250 is available when the factory payment is due</li>
-      </ul>
+    <div class="amb-card">
+      <span class="icon">🧸</span>
+      <h4>Custom Toy</h4>
+      <p>A squeeze toy designed from scratch — unique to your camp's identity.</p>
     </div>
-
-    <a href="/apply/" class="btn-yellow">Apply as a Camp Ambassador →</a>
+    <div class="amb-card">
+      <span class="icon">🏆</span>
+      <h4>Founding Recognition</h4>
+      <p>Recognized permanently as a Founding Contributor in our Hall of Fame.</p>
+    </div>
+    <div class="amb-card">
+      <span class="icon">💚</span>
+      <h4>Real Impact</h4>
+      <p>Every toy sold keeps funding camp experiences for years to come.</p>
+    </div>
   </div>
+  <div class="expects">
+    <h4>What We Ask of Our Ambassadors</h4>
+    <ul>
+      <li><span>✓</span> Commit to raising $2,250 through your network — or cover it directly</li>
+      <li><span>✓</span> Share your camp's campaign and help spread the word</li>
+      <li><span>✓</span> Review and approve your custom toy design within 5 business days</li>
+      <li><span>✓</span> Be available for a brief check-in during the ~6-week production process</li>
+      <li><span>✓</span> Ensure the full $2,250 is ready when the factory payment is due</li>
+    </ul>
+  </div>
+  <a href="/apply/" class="btn-yellow">Apply as a Camp Ambassador →</a>
 </section>
 
 <!-- PARTNERS -->
-<div class="partners">
-  <div class="kicker">Our Partners</div>
-  <div class="partner-logos">
-    <div class="partner-item">
-      SCOPE
-      <small>scopeusa.org · National charity partner</small>
-    </div>
-    <div class="partner-item">
-      The Squeeze Project
-      <small>thesqueezeproject.com · 501(c)(3) pending</small>
-    </div>
+<div class="partner-bar">
+  <div class="kicker">In Partnership With</div>
+  <div class="partner-name">
+    SCOPE
+    <small>scopeusa.org · National charity partner</small>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="brand">
+  <div class="foot-brand">
     <img src="logo.jpg" alt="The Squeeze Project">
     <span>The Squeeze Project</span>
   </div>
-  <div class="links">
+  <div class="foot-links">
     <a href="#story">Our Mission</a>
     <a href="#how">How It Works</a>
+    <a href="#ambassador">Get Involved</a>
     <a href="/apply/">Apply as Ambassador</a>
-    <a href="/donors/">Support / Donate</a>
     <a href="https://scopeusa.org" target="_blank">SCOPE</a>
     <a href="mailto:hello@thesqueezeproject.com">Contact</a>
   </div>
-  <div class="fine">
+  <div class="foot-fine">
     100 Jericho Quadrangle, Suite 230 · Jericho, NY<br>
     © 2026 The Squeeze Project. 501(c)(3) status pending. All funds raised are used exclusively for mold creation and program launch costs.
   </div>
