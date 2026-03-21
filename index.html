@@ -143,12 +143,24 @@ footer { background:var(--dark); color:#fff; padding:44px 24px 28px; }
 
 /* RESPONSIVE */
 @media(max-width:768px) {
-  nav { padding:0 16px; }
+  nav { padding:0 16px; height:56px; }
   .nav-brand strong { display:none; }
+  .nav-brand img { height:34px; }
+  .nav-links { gap:14px; }
+  .nav-links a { font-size:13px; }
+  .nav-apply { padding:7px 14px; font-size:13px !important; }
   .story-grid { grid-template-columns:1fr; gap:32px; }
   .steps { grid-template-columns:1fr 1fr; }
   .camps-grid { grid-template-columns:1fr; }
   .amb-cards { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:560px) {
+  nav { padding:0 12px; }
+  .nav-links a:not(.nav-apply) { display:none; }
+  .hero { padding:90px 20px 60px; }
+  .hero h1 { letter-spacing:-1px; }
+  .btn-row { flex-direction:column; align-items:center; }
+  .btn-green, .btn-outline { width:100%; max-width:300px; text-align:center; }
 }
 @media(max-width:480px) {
   .steps { grid-template-columns:1fr; }
