@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support The Squeeze Project — Help Send Kids to Camp</title>
+<meta name="description" content="Support The Squeeze Project and help send kids to summer camp. 100% of donations fund camp experiences for children who need a little extra help getting there.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --green:      #2e7d4f;
+  --green-dark: #1a4f30;
+  --green-pale: #e8f5ee;
+  --yellow:     #f5c842;
+  --orange:     #e8793a;
+  --cream:      #faf8f3;
+  --text:       #1e1e1e;
+  --muted:      #666;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--cream); }
+
+nav {
+  background: var(--green-dark); padding: 0 48px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-brand img { height: 36px; border-radius: 4px; opacity: 0.9; }
+.nav-brand span { font-size: 14px; font-weight: 700; color: white; }
+nav a.back { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+nav a.back:hover { color: white; }
+
+.page-header {
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: white; text-align: center; padding: 60px 24px 52px;
+}
+.page-header .badge {
+  display: inline-block; background: var(--yellow); color: var(--green-dark);
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  padding: 5px 14px; border-radius: 20px; margin-bottom: 18px;
+}
+.page-header h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; margin-bottom: 12px; }
+.page-header p { font-size: 17px; opacity: 0.85; max-width: 520px; margin: 0 auto; line-height: 1.6; }
+
+.page-body { max-width: 860px; margin: 0 auto; padding: 40px 20px 60px; }
+
+/* IMPACT STRIP */
+.impact-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-bottom: 36px;
+}
+.impact-card {
+  background: white; border-radius: 14px; padding: 28px 20px; text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06); border: 1.5px solid #d4ead9;
+}
+.impact-card .num { font-size: 36px; font-weight: 900; color: var(--green); display: block; }
+.impact-card .lbl { font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+
+/* TIERS */
+.tiers-card {
+  background: white; border-radius: 16px; padding: 36px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 28px;
+  border: 1.5px solid #d4ead9;
+}
+.tiers-card h2 { font-size: 20px; font-weight: 800; color: var(--green-dark); margin-bottom: 6px; }
+.tiers-card .sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+.tier {
+  display: flex; align-items: center; gap: 20px;
+  padding: 18px 20px; border-radius: 12px; margin-bottom: 14px;
+  border: 2px solid #e0f0e6; background: var(--green-pale);
+  transition: all .2s; cursor: default;
+}
+.tier:last-child { margin-bottom: 0; }
+.tier.featured { background: linear-gradient(135deg, var(--green-dark), var(--green)); color: white; border-color: transparent; }
+.tier-icon { font-size: 32px; flex-shrink: 0; }
+.tier-info { flex: 1; }
+.tier-info h3 { font-size: 16px; font-weight: 800; color: var(--green-dark); margin-bottom: 3px; }
+.tier.featured .tier-info h3 { color: white; }
+.tier-info p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.tier.featured .tier-info p { color: rgba(255,255,255,0.8); }
+.tier-amount { font-size: 22px; font-weight: 900; color: var(--green); flex-shrink: 0; }
+.tier.featured .tier-amount { color: var(--yellow); }
+.donate-btn {
+  display: block; width: 100%; padding: 15px;
+  background: var(--green); color: white; border: none;
+  border-radius: 12px; font-size: 16px; font-weight: 800;
+  text-align: center; text-decoration: none; margin-top: 24px;
+  transition: background .2s; font-family: inherit;
+}
+.donate-btn:hover { background: var(--green-dark); }
+
+/* TRANSPARENCY */
+.transparency {
+  background: white; border-radius: 16px; padding: 32px 36px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 28px;
+  border: 1.5px solid #d4ead9;
+}
+.transparency h2 { font-size: 18px; font-weight: 800; color: var(--green-dark); margin-bottom: 20px; }
+.breakdown { display: flex; flex-direction: column; gap: 14px; }
+.breakdown-row { display: flex; align-items: center; gap: 14px; }
+.breakdown-bar-wrap { flex: 1; background: #eee; border-radius: 8px; height: 12px; overflow: hidden; }
+.breakdown-bar { height: 100%; border-radius: 8px; background: var(--green); }
+.breakdown-label { font-size: 14px; font-weight: 600; color: var(--text); width: 220px; flex-shrink: 0; }
+.breakdown-pct { font-size: 14px; font-weight: 800; color: var(--green); width: 44px; text-align: right; flex-shrink: 0; }
+
+/* HALL OF FAME */
+.hof {
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  border-radius: 16px; padding: 36px; color: white; margin-bottom: 28px; text-align: center;
+}
+.hof h2 { font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+.hof .sub { font-size: 14px; opacity: 0.85; margin-bottom: 28px; line-height: 1.6; }
+.hof-names { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 24px; }
+.hof-name {
+  background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 24px; padding: 8px 18px; font-size: 14px; font-weight: 600;
+}
+.hof-cta { font-size: 13px; opacity: 0.7; }
+
+/* TAX NOTE */
+.tax-box {
+  background: #fffde7; border: 1.5px solid #ffe082; border-radius: 12px;
+  padding: 18px 20px; font-size: 13px; color: #666; line-height: 1.7;
+}
+.tax-box strong { color: #c8860a; }
+
+footer {
+  background: var(--green-dark); color: white; text-align: center; padding: 36px 24px;
+}
+footer .brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; }
+footer .brand img { height: 28px; border-radius: 4px; opacity: 0.85; }
+footer .brand span { font-weight: 700; font-size: 14px; }
+footer p { color: rgba(255,255,255,0.5); font-size: 12px; line-height: 1.8; }
+footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+
+@media (max-width: 600px) {
+  nav { padding: 0 16px; }
+  .impact-strip { grid-template-columns: 1fr; }
+  .tiers-card, .transparency, .hof { padding: 24px 20px; }
+  .tier { flex-wrap: wrap; }
+  .breakdown-label { width: auto; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">
+    <img src="logo.jpg" alt="The Squeeze Project">
+    <span>The Squeeze Project</span>
+  </a>
+  <a href="/" class="back">← Back to Home</a>
+</nav>
+
+<div class="page-header">
+  <div class="badge">💚 Support The Mission</div>
+  <h1>Help Send a Kid to Camp</h1>
+  <p>Every dollar you give goes toward creating custom squeeze toys that fund real camp experiences for kids who need a little extra help getting there.</p>
+</div>
+
+<div class="page-body">
+
+  <!-- IMPACT -->
+  <div class="impact-strip">
+    <div class="impact-card">
+      <span class="num">100%</span>
+      <div class="lbl">of profits go directly to funding camp experiences</div>
+    </div>
+    <div class="impact-card">
+      <span class="num">$2,250</span>
+      <div class="lbl">fully funds one custom camp toy mold — made once, used forever</div>
+    </div>
+    <div class="impact-card">
+      <span class="num">2</span>
+      <div class="lbl">founding partner camps already approved and in development</div>
+    </div>
+  </div>
+
+  <!-- TIERS -->
+  <div class="tiers-card">
+    <h2>Choose Your Impact</h2>
+    <div class="sub">Every contribution helps. Pick the level that works for you — or donate any amount via the button below.</div>
+
+    <div class="tier featured">
+      <div class="tier-icon">🏆</div>
+      <div class="tier-info">
+        <h3>Mold Founder</h3>
+        <p>Fund an entire custom camp mold. Your name goes in the Founding Contributors Hall of Fame permanently.</p>
+      </div>
+      <div class="tier-amount">$2,250</div>
+    </div>
+
+    <div class="tier">
+      <div class="tier-icon">⛺</div>
+      <div class="tier-info">
+        <h3>Camp Sponsor</h3>
+        <p>A major contribution toward a camp mold. Recognized as a key supporter on the website.</p>
+      </div>
+      <div class="tier-amount">$500</div>
+    </div>
+
+    <div class="tier">
+      <div class="tier-icon">🧸</div>
+      <div class="tier-info">
+        <h3>Squeeze Backer</h3>
+        <p>Help build momentum. Your donation goes directly toward mold creation and camp funding.</p>
+      </div>
+      <div class="tier-amount">$100</div>
+    </div>
+
+    <div class="tier">
+      <div class="tier-icon">💚</div>
+      <div class="tier-info">
+        <h3>Friend of Camp</h3>
+        <p>Every dollar counts. Join the community of people who believe every kid deserves summer camp.</p>
+      </div>
+      <div class="tier-amount">$25</div>
+    </div>
+
+    <a href="mailto:hello@thesqueezeproject.com?subject=Donation%20to%20The%20Squeeze%20Project" class="donate-btn">💚 Make a Donation — Contact Us to Give</a>
+    <p style="text-align:center; font-size:12px; color:var(--muted); margin-top:10px;">Secure payment options available. We'll be in touch within 24 hours.</p>
+  </div>
+
+  <!-- TRANSPARENCY -->
+  <div class="transparency">
+    <h2>Where Your Money Goes</h2>
+    <div class="breakdown">
+      <div class="breakdown-row">
+        <div class="breakdown-label">🏕️ Mold creation & toy production</div>
+        <div class="breakdown-bar-wrap"><div class="breakdown-bar" style="width:80%"></div></div>
+        <div class="breakdown-pct">80%</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="breakdown-label">⛺ Camp scholarship funding</div>
+        <div class="breakdown-bar-wrap"><div class="breakdown-bar" style="width:15%"></div></div>
+        <div class="breakdown-pct">15%</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="breakdown-label">🛠️ Program admin & launch costs</div>
+        <div class="breakdown-bar-wrap"><div class="breakdown-bar" style="width:5%; background:#aaa;"></div></div>
+        <div class="breakdown-pct" style="color:#aaa;">5%</div>
+      </div>
+    </div>
+    <p style="font-size:12px; color:var(--muted); margin-top:20px; line-height:1.6;">At this early stage, all funds raised are used exclusively for mold creation and program launch costs. As toys begin selling, 100% of profits flow directly to camp funding.</p>
+  </div>
+
+  <!-- HALL OF FAME -->
+  <div class="hof">
+    <div style="font-size:48px; margin-bottom:14px;">🏆</div>
+    <h2>Founding Contributors Hall of Fame</h2>
+    <div class="sub">These are the people who believed in the mission from day one — before the toys, before the camps, before the sales. They made it possible.</div>
+    <div class="hof-names">
+      <span class="hof-name">Your name could be here</span>
+    </div>
+    <div class="hof-cta">Support the project today and be recognized as a Founding Contributor permanently on this page.</div>
+  </div>
+
+  <!-- TAX NOTE -->
+  <div class="tax-box">
+    <strong>Tax Note:</strong> The Squeeze Project has 501(c)(3) charitable status pending with the IRS. We expect eligible donations made in connection with this program to be tax-deductible to the extent permitted by law, if and when IRS approval is granted. Donors should retain their own records and consult a qualified tax advisor regarding deductibility. All funds raised at this stage are used exclusively for mold creation and program launch costs.
+  </div>
+
+</div>
+
+<footer>
+  <div class="brand">
+    <img src="logo.jpg" alt="The Squeeze Project">
+    <span>The Squeeze Project</span>
+  </div>
+  <p>
+    100 Jericho Quadrangle, Suite 230 · Jericho, NY<br>
+    <a href="mailto:hello@thesqueezeproject.com">hello@thesqueezeproject.com</a> · <a href="https://scopeusa.org" target="_blank">scopeusa.org</a><br>
+    © 2026 The Squeeze Project. 501(c)(3) status pending.
+  </p>
+</footer>
+
+</body>
+</html>
