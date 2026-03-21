@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camp Ambassador Commitment Form — The Squeeze Project</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4ff; min-height: 100vh; padding: 24px 16px; }
+  .card { background: white; max-width: 680px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+  .header { background: linear-gradient(135deg, #6C63FF, #4CAF9C); padding: 36px 32px; color: white; }
+  .header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .header p { font-size: 13px; opacity: 0.9; }
+  .address { font-size: 12px; opacity: 0.75; margin-top: 8px; }
+  .how-it-works { background: #f8f7ff; border-left: 4px solid #6C63FF; margin: 24px 32px; padding: 16px 20px; border-radius: 0 8px 8px 0; }
+  .how-it-works h3 { font-size: 13px; font-weight: 700; color: #6C63FF; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .how-it-works ul { padding-left: 18px; }
+  .how-it-works li { font-size: 13px; color: #444; line-height: 1.7; margin-bottom: 4px; }
+  .section { padding: 0 32px 24px; }
+  .section-title { font-size: 13px; font-weight: 700; color: #6C63FF; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #f0f4ff; padding-bottom: 8px; margin-bottom: 18px; margin-top: 28px; }
+  .field { margin-bottom: 18px; }
+  label { display: block; font-size: 13px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  label span { color: #e53935; }
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%; padding: 10px 14px; border: 1.5px solid #ddd; border-radius: 8px;
+    font-size: 14px; color: #222; transition: border 0.2s;
+    font-family: inherit;
+  }
+  input:focus, textarea:focus { outline: none; border-color: #6C63FF; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .commitment-box { background: #f8f7ff; border: 1.5px solid #e0dcff; border-radius: 8px; padding: 16px 20px; margin-bottom: 18px; }
+  .commitment-item { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
+  .commitment-item:last-child { margin-bottom: 0; }
+  .commitment-item input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: #6C63FF; cursor: pointer; }
+  .commitment-item label { font-size: 13px; color: #333; font-weight: normal; line-height: 1.6; cursor: pointer; }
+  .tax-note { background: #fffde7; border: 1px solid #ffe082; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+  .tax-note strong { color: #f57f17; }
+  .payment-note { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 14px 16px; font-size: 13px; color: #2e7d32; line-height: 1.6; margin-bottom: 18px; }
+  .sig-row { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+  .submit-btn { display: block; width: 100%; padding: 14px; background: linear-gradient(135deg, #6C63FF, #4CAF9C); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px; letter-spacing: 0.3px; transition: opacity 0.2s; }
+  .submit-btn:hover { opacity: 0.9; }
+  .footer { text-align: center; font-size: 11px; color: #aaa; padding: 16px 32px 24px; }
+  .success { display: none; text-align: center; padding: 60px 32px; }
+  .success h2 { color: #6C63FF; font-size: 24px; margin-bottom: 12px; }
+  .success p { color: #666; font-size: 14px; line-height: 1.6; }
+  @media (max-width: 500px) {
+    .two-col, .sig-row { grid-template-columns: 1fr; }
+    .header, .section { padding-left: 20px; padding-right: 20px; }
+    .how-it-works { margin: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>🤗 Camp Ambassador Commitment Form</h1>
+    <p>The Squeeze Project</p>
+    <p class="address">100 Jericho Quadrangle, Suite 230 · Jericho, NY</p>
+  </div>
+
+  <div class="how-it-works">
+    <h3>How It Works</h3>
+    <ul>
+      <li>Each Camp Ambassador commits to raising <strong>$2,250</strong> — the exact one-time cost of creating a custom production mold for that camp toy.</li>
+      <li>The mold is made once and can be reused in the future — this is not a recurring charge.</li>
+      <li>Once a family officially joins, we begin mold design and production. Estimated timeline: <strong>~6 weeks</strong>.</li>
+      <li>When the factory is ready, the full $2,250 must be available from donations and/or the family's own payment.</li>
+    </ul>
+  </div>
+
+  <form id="ambassadorForm" onsubmit="handleSubmit(event)">
+  <div class="section">
+
+    <div class="section-title">Child & Family Information</div>
+
+    <div class="field">
+      <label>Child Name <span>*</span></label>
+      <input type="text" name="child_name" required placeholder="Full name">
+    </div>
+
+    <div class="field">
+      <label>Parent / Guardian Name <span>*</span></label>
+      <input type="text" name="parent_name" required placeholder="Full name">
+    </div>
+
+    <div class="field">
+      <label>Camp Name <span>*</span></label>
+      <input type="text" name="camp_name" required placeholder="Name of the camp">
+    </div>
+
+    <div class="two-col">
+      <div class="field">
+        <label>Best Email <span>*</span></label>
+        <input type="email" name="email" required placeholder="email@example.com">
+      </div>
+      <div class="field">
+        <label>Phone <span>*</span></label>
+        <input type="tel" name="phone" required placeholder="(555) 000-0000">
+      </div>
+    </div>
+
+    <div class="section-title">Family Commitment</div>
+
+    <div class="commitment-box">
+      <div class="commitment-item">
+        <input type="checkbox" id="c1" name="commit_1" required>
+        <label for="c1">We are voluntarily joining The Squeeze Project Camp Ambassador program for the camp listed above.</label>
+      </div>
+      <div class="commitment-item">
+        <input type="checkbox" id="c2" name="commit_2" required>
+        <label for="c2">We understand the fundraising target is <strong>$2,250</strong>, which represents the exact one-time mold cost for the custom toy design.</label>
+      </div>
+      <div class="commitment-item">
+        <input type="checkbox" id="c3" name="commit_3" required>
+        <label for="c3">We understand that The Squeeze Project will begin design and mold development once our participation is confirmed.</label>
+      </div>
+      <div class="commitment-item">
+        <input type="checkbox" id="c4" name="commit_4" required>
+        <label for="c4">We understand the mold/design timeline is approximately <strong>6 weeks</strong>, though exact timing may vary based on factory scheduling and approvals.</label>
+      </div>
+      <div class="commitment-item">
+        <input type="checkbox" id="c5" name="commit_5" required>
+        <label for="c5">We understand the full $2,250 must be paid when the mold payment is due, whether raised from others or paid by us directly.</label>
+      </div>
+      <div class="commitment-item">
+        <input type="checkbox" id="c6" name="commit_6" required>
+        <label for="c6">If the full fundraising amount has not been raised by that time, we authorize The Squeeze Project to charge the unpaid balance (up to $2,250 less donations received) to a payment method we will provide separately.</label>
+      </div>
+    </div>
+
+    <div class="tax-note">
+      <strong>Tax Note:</strong> The Squeeze Project has 501(c)(3) status pending. We expect eligible donations made in connection with this program to be tax-deductible to the extent permitted by law if and when IRS approval is granted. Donors should keep their records and consult their tax advisor regarding deductibility.
+    </div>
+
+    <div class="section-title">Backup Payment Authorization</div>
+
+    <div class="payment-note">
+      💳 To authorize backup payment, our team will contact you separately via a secure payment link. By checking the box above, you have confirmed your authorization. No card details are collected here.
+    </div>
+
+    <div class="field">
+      <label>Name on Card <span>*</span></label>
+      <input type="text" name="card_name" required placeholder="As it appears on the card">
+    </div>
+
+    <div class="two-col">
+      <div class="field">
+        <label>Last 4 Digits of Card <span>*</span></label>
+        <input type="text" name="card_last4" maxlength="4" required placeholder="e.g. 4242">
+      </div>
+      <div class="field">
+        <label>Billing Zip Code <span>*</span></label>
+        <input type="text" name="billing_zip" maxlength="10" required placeholder="e.g. 11753">
+      </div>
+    </div>
+
+    <div class="section-title">Signature</div>
+
+    <div class="sig-row">
+      <div class="field">
+        <label>Parent / Guardian Full Name (as signature) <span>*</span></label>
+        <input type="text" name="signature" required placeholder="Type your full name to sign">
+      </div>
+      <div class="field">
+        <label>Date <span>*</span></label>
+        <input type="text" name="date" required id="dateField">
+      </div>
+    </div>
+
+    <p style="font-size:12px; color:#888; margin-bottom:20px; line-height:1.5;">By signing, I confirm that I understand the commitment above and want to move forward with The Squeeze Project Camp Ambassador program.</p>
+
+    <button type="submit" class="submit-btn">Submit Commitment Form ✓</button>
+  </div>
+  </form>
+
+  <div class="success" id="successMsg">
+    <div style="font-size:48px; margin-bottom:16px;">🎉</div>
+    <h2>Thank you for joining!</h2>
+    <p>We've received your Camp Ambassador commitment.<br>
+    Our team will be in touch within 1–2 business days to confirm next steps and send you a secure payment link.<br><br>
+    <strong>The Squeeze Project</strong><br>
+    <a href="mailto:hello@thesqueezeproject.org" style="color:#6C63FF;">hello@thesqueezeproject.org</a></p>
+  </div>
+
+  <div class="footer">The Squeeze Project · 100 Jericho Quadrangle, Suite 230 · Jericho, NY</div>
+</div>
+
+<script>
+  // Auto-fill today's date
+  const d = new Date();
+  document.getElementById('dateField').value = d.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric'});
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('ambassadorForm');
+    const success = document.getElementById('successMsg');
+
+    // Collect form data
+    const data = new FormData(form);
+    const payload = {};
+    data.forEach((v, k) => payload[k] = v);
+
+    // Submit to Formspree (free, sends email on submission)
+    fetch('https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    }).catch(() => {}); // fail silently if not configured yet
+
+    form.style.display = 'none';
+    success.style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
