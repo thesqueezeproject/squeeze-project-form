@@ -183,6 +183,10 @@ footer { background:var(--dark); color:#fff; padding:44px 24px 28px; }
 @media(max-width:600px){
   [style*="--amb-grid"] { grid-template-columns: repeat(2,1fr) !important; }
 }
+
+@media(max-width:640px){
+  [style*="--phase-grid"] { grid-template-columns: 1fr !important; }
+}
 </style>
 </head>
 <body>
@@ -326,7 +330,7 @@ footer { background:var(--dark); color:#fff; padding:44px 24px 28px; }
     <h2 style="font-size:clamp(26px,4vw,42px); font-weight:900; margin-bottom:16px; line-height:1.15;">We're in the first inning.<br><span style="color:#7fce9f;">The best is still ahead.</span></h2>
     <p style="font-size:17px; color:rgba(255,255,255,0.75); max-width:580px; margin:0 auto 48px; line-height:1.8;">Right now we're funding the molds — a one-time cost per camp. Once that's done, the real engine starts.</p>
 
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; text-align:left;">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; text-align:left; --phase-grid:1;">
       <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:28px 22px;">
         <div style="font-size:32px; margin-bottom:14px;">🎯</div>
         <div style="font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#7fce9f; margin-bottom:8px;">Phase 1 — Now</div>
