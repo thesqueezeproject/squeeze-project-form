@@ -1,6 +1,6 @@
 {
   "updated": "2026-03-25",
-  "grand_total": 5040,
+  "grand_total": 5060,
   "goal": 11250,
   "ambassadors": {
     "luke": {
@@ -20,7 +20,7 @@
       "goal": 2250
     },
     "parker": {
-      "raised": 229,
+      "raised": 249,
       "goal": 2250
     }
   }
