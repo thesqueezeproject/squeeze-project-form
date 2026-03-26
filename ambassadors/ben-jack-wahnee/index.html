@@ -162,30 +162,7 @@ footer a { color:rgba(255,255,255,.65); }
   </p>
 </footer>
 
-<script>
-// Progress config — update raised amount here when donations come in
-// raised loaded from /data/donations.json
-const goal = 2250;
 
-window.addEventListener('load', () => {
-  const pct = Math.min(Math.round((raised / goal) * 100), 100);
-  const remaining = Math.max(goal - raised, 0);
-  document.getElementById('raisedAmt').textContent = '$' + raised.toLocaleString();
-  document.getElementById('pct').textContent = pct + '%';
-  document.getElementById('remaining').textContent = '$' + remaining.toLocaleString();
-  setTimeout(() => {
-    document.getElementById('progressFill').style.width = pct + '%';
-  }, 300);
-});
-
-function copyLink() {
-  navigator.clipboard.writeText('https://thesqueezeproject.com/ambassadors/ben-jack-wahnee/').then(() => {
-    const btn = document.querySelector('.btn-copy');
-    btn.textContent = '✓ Copied!';
-    setTimeout(() => btn.textContent = 'Copy Link', 2000);
-  });
-}
-</script>
 
 
 <div class="zelle-modal" id="zelleModal" onclick="if(event.target===this)hideZelle()">
@@ -205,12 +182,12 @@ function hideZelle(){ document.getElementById("zelleModal").classList.remove("ac
 <script>
 
 </script>
+
 <script>
 fetch('/data/donations.json').then(r=>r.json()).then(d=>{
   const a = d.ambassadors['ben'];
   const raised = a.raised, goal = a.goal;
   const pct = Math.min(100, Math.round(raised/goal*100));
-  const remaining = goal - raised;
   const rEl = document.getElementById('raisedAmt');
   const fEl = document.getElementById('progressFill');
   const pEl = document.getElementById('pct');
@@ -218,7 +195,7 @@ fetch('/data/donations.json').then(r=>r.json()).then(d=>{
   if(rEl) rEl.textContent = '$'+raised.toLocaleString();
   if(fEl) fEl.style.width = pct+'%';
   if(pEl) pEl.textContent = pct+'%';
-  if(remEl) remEl.textContent = '$'+remaining.toLocaleString();
+  if(remEl) remEl.textContent = '$'+(goal-raised).toLocaleString();
 }).catch(()=>{});
 </script>
 </body>
