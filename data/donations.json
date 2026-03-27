@@ -1,5 +1,5 @@
 {
-  "grand_total": 7668,
+  "grand_total": 7693,
   "goal": 13500,
   "ambassadors": {
     "luke": {
@@ -442,7 +442,7 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 1225,
+      "raised": 1250,
       "donations": [
         {
           "date": "Mar 24",
@@ -555,6 +555,12 @@
         {
           "date": "Mar 27",
           "name": "Andrew Hochfelder",
+          "amount": 25,
+          "platform": "venmo"
+        },
+        {
+          "date": "Mar 27",
+          "name": "Kimberly Abramowitz",
           "amount": 25,
           "platform": "venmo"
         }
