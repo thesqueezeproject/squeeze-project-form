@@ -1,6 +1,6 @@
 {
   "grand_total": 7508,
-  "goal": 11250,
+  "goal": 13500,
   "ambassadors": {
     "luke": {
       "name": "Luke & Aria Kerman",
@@ -574,6 +574,14 @@
           "platform": "venmo"
         }
       ]
+    },
+    "remi": {
+      "name": "Remi Newman",
+      "camp": "Camp Tyler Hill",
+      "color": "#1a5276",
+      "goal": 2250,
+      "raised": 0,
+      "donations": []
     }
   }
 }

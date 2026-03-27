@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remi Newman — Tyler Hill Camp | The Squeeze Project</title>
+<link rel="icon" href="/favicon.ico">
+<style>
+  :root {
+    --green: #2e7d4f;
+    --dark:  #1a4f30;
+    --pale:  #e8f5ee;
+    --yellow:#f5c842;
+    --cream: #faf8f3;
+    --muted: #666;
+    --camp:  #1a5276;
+    --camp-dark: #154360;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:var(--cream); color:#1e1e1e; }
+  nav { background:rgba(255,255,255,0.97); border-bottom:1px solid #e8e8e8; padding:14px 24px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
+  .nav-logo { font-weight:800; font-size:16px; color:var(--dark); text-decoration:none; }
+  .nav-logo span { color:var(--green); }
+  .nav-back { font-size:13px; color:var(--muted); text-decoration:none; }
+  .nav-back:hover { color:var(--dark); }
+  .hero { background:linear-gradient(135deg, var(--camp-dark) 0%, var(--camp) 100%); color:white; padding:64px 24px 56px; text-align:center; }
+  .photo-wrap { margin-bottom:24px; }
+  .photo-wrap img { width:110px; height:110px; border-radius:50%; object-fit:cover; border:4px solid rgba(255,255,255,0.4); }
+  .hero h1 { font-size:36px; font-weight:900; margin-bottom:8px; }
+  .camp-badge { display:inline-block; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); padding:5px 16px; border-radius:50px; font-size:13px; font-weight:600; margin-bottom:20px; letter-spacing:0.5px; }
+  .hero .tagline { font-size:18px; opacity:0.9; max-width:480px; margin:0 auto; line-height:1.5; }
+  .progress-section { background:white; border-bottom:1px solid #eee; padding:28px 24px; max-width:600px; margin:0 auto; }
+  .progress-label { display:flex; justify-content:space-between; margin-bottom:10px; }
+  .progress-raised { font-size:28px; font-weight:900; color:var(--camp); }
+  .progress-pct { font-size:15px; font-weight:700; color:var(--camp); align-self:flex-end; }
+  .bar-bg { background:#eee; border-radius:8px; height:12px; margin-bottom:8px; }
+  .bar-fill { background:linear-gradient(90deg, var(--camp), #2980b9); border-radius:8px; height:12px; }
+  .progress-sub { font-size:13px; color:var(--muted); }
+  .content { max-width:600px; margin:0 auto; padding:40px 24px; }
+  .story { font-size:17px; line-height:1.7; color:#333; margin-bottom:32px; }
+  .story strong { color:#1e1e1e; }
+  .donate-card { background:white; border-radius:16px; border:2px solid var(--camp); padding:32px; margin-bottom:32px; text-align:center; }
+  .donate-card h2 { font-size:22px; font-weight:800; margin-bottom:8px; color:var(--camp-dark); }
+  .donate-card p { font-size:15px; color:var(--muted); margin-bottom:20px; line-height:1.5; }
+  .donate-note { font-size:13px; color:var(--muted); margin-bottom:20px; font-style:italic; }
+  .btn { display:block; color:white; font-size:17px; font-weight:800; padding:16px 24px; border-radius:12px; text-decoration:none; margin-bottom:12px; }
+  .btn-stripe { background:var(--camp); }
+  .btn-stripe:hover { background:var(--camp-dark); }
+  .btn-venmo { background:#3d95ce; font-size:16px; }
+  .btn-zelle { background:#6d1ed4; font-size:16px; margin-bottom:0; }
+  .impact { background:var(--pale); border-radius:16px; padding:28px; margin-bottom:32px; }
+  .impact h3 { font-size:15px; font-weight:800; color:var(--dark); margin-bottom:16px; text-transform:uppercase; letter-spacing:0.5px; }
+  .impact ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .impact li { font-size:15px; color:#333; display:flex; gap:10px; }
+  .learn-more { text-align:center; padding:16px 0 0; }
+  .learn-more a { font-size:14px; color:var(--green); font-weight:600; text-decoration:none; }
+  footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:24px; font-size:13px; }
+  footer a { color:rgba(255,255,255,0.8); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">🍋 The Squeeze <span>Project</span></a>
+  <a class="nav-back" href="/">← Back to home</a>
+</nav>
+
+<div class="hero">
+  <div class="photo-wrap">
+    <img src="https://i.imgur.com/RFzKezd.jpeg" alt="Remi Newman">
+  </div>
+  <h1>Remi Newman</h1>
+  <div class="camp-badge">🏕️ Camp Tyler Hill · Charter Ambassador</div>
+  <p class="tagline">I'm raising money to create a custom Tyler Hill squeeze toy — and help more kids get to camp.</p>
+</div>
+
+<div class="progress-section">
+  <div class="progress-label">
+    <span class="progress-raised" id="raised-amt">$0</span>
+    <span class="progress-pct" id="pct-amt">0%</span>
+  </div>
+  <div class="bar-bg"><div class="bar-fill" id="bar-fill" style="width:0%"></div></div>
+  <div class="progress-label">
+    <span class="progress-sub">of $2,250 goal</span>
+    <span class="progress-sub" id="donor-count"></span>
+  </div>
+</div>
+
+<div class="content">
+  <p class="story">
+    Camp Tyler Hill has been a huge part of my life. I've made lifelong friendships, grown as a person, and experienced something truly special every summer.<br><br>
+    The Squeeze Project is my way of giving back — and helping make sure <strong>more kids get that same experience</strong>. Every dollar I raise goes toward funding a custom Tyler Hill squeeze toy, and helping send more kids to camp who otherwise couldn't afford it.
+  </p>
+
+  <div class="donate-card">
+    <h2>Support Remi's Campaign</h2>
+    <p>Help fund the custom Tyler Hill mold — a one-time cost that launches the program at camp forever.</p>
+    <p class="donate-note">"Your support means the world — let's bring Tyler Hill's squeeze toy to life!"</p>
+    <a class="btn btn-stripe" href="#" id="stripe-btn">💳 Donate via Stripe</a>
+    <a class="btn btn-venmo" href="https://venmo.com/thesqueezeproject" target="_blank">Venmo: @thesqueezeproject</a>
+    <a class="btn btn-zelle" href="#" onclick="alert('Zelle: hello@thesqueezeproject.com\nInclude your name and \'Remi\' in the note');return false;">Zelle: hello@thesqueezeproject.com</a>
+  </div>
+
+  <div class="impact">
+    <h3>Where your money goes</h3>
+    <ul>
+      <li><span>🏕️</span><span>Funds the custom Tyler Hill squeeze toy mold — one-time cost</span></li>
+      <li><span>💚</span><span>Proceeds help send kids to camp who couldn't otherwise afford it</span></li>
+      <li><span>♾️</span><span>Once the mold is made, it lasts forever — toys sold every year after</span></li>
+    </ul>
+  </div>
+
+  <div class="learn-more">
+    <a href="/">Learn more about The Squeeze Project →</a>
+  </div>
+</div>
+
+<footer>
+  <p>The Squeeze Project &nbsp;·&nbsp; <a href="/">thesqueezeproject.com</a></p>
+</footer>
+
+<script>
+async function loadProgress() {
+  try {
+    const res = await fetch('/data/donations.json?v=' + Date.now());
+    const data = await res.json();
+    const amb = data.ambassadors.remi;
+    if (!amb) return;
+    const raised = amb.raised || 0;
+    const goal = amb.goal || 2250;
+    const pct = Math.min(100, Math.round(raised / goal * 100));
+    const donors = (amb.donations || []).length;
+    document.getElementById('raised-amt').textContent = '$' + raised.toLocaleString();
+    document.getElementById('pct-amt').textContent = pct + '%';
+    document.getElementById('bar-fill').style.width = pct + '%';
+    if (donors > 0) document.getElementById('donor-count').textContent = donors + ' donor' + (donors !== 1 ? 's' : '');
+  } catch(e) {}
+}
+const stripeLink = null; // TODO: replace with plink_ ID once Jarret creates it
+if (stripeLink) {
+  document.getElementById('stripe-btn').href = 'https://buy.stripe.com/' + stripeLink;
+}
+loadProgress();
+</script>
+</body>
+</html>
