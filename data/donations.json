@@ -1,5 +1,5 @@
 {
-  "grand_total": 8143,
+  "grand_total": 8179,
   "goal": 13500,
   "ambassadors": {
     "luke": {
@@ -466,7 +466,7 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 1500,
+      "raised": 1536,
       "donations": [
         {
           "date": "Mar 24",
@@ -599,6 +599,12 @@
           "name": "Janine Loewy",
           "amount": 100,
           "platform": "stripe"
+        },
+        {
+          "date": "Mar 27",
+          "name": "Alla Rosenblatt",
+          "amount": 36,
+          "platform": "venmo"
         }
       ]
     },
