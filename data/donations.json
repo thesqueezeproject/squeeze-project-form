@@ -1,5 +1,5 @@
 {
-  "grand_total": 6586,
+  "grand_total": 7508,
   "goal": 6750,
   "ambassadors": {
     "luke": {
@@ -7,7 +7,7 @@
       "camp": "Camp IHC",
       "color": "#4A6FA5",
       "goal": 2250,
-      "raised": 1862,
+      "raised": 1962,
       "donations": [
         {
           "date": "Mar 24",
@@ -110,6 +110,12 @@
           "name": "Steven Schneider",
           "amount": 100.0,
           "platform": "venmo"
+        },
+        {
+          "date": "Mar 26",
+          "name": "Jason Lilien",
+          "amount": 100,
+          "platform": "stripe"
         }
       ]
     },
@@ -118,7 +124,7 @@
       "camp": "Camp Pontiac",
       "color": "#CC0000",
       "goal": 2250,
-      "raised": 1528,
+      "raised": 2250,
       "donations": [
         {
           "date": "Mar 24",
@@ -227,6 +233,12 @@
           "name": "Mark Rose",
           "amount": 500,
           "platform": "venmo"
+        },
+        {
+          "date": "Mar 26",
+          "name": "Domenick Chieco",
+          "amount": 722,
+          "platform": "stripe"
         }
       ]
     },
@@ -424,7 +436,7 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 1015,
+      "raised": 1115,
       "donations": [
         {
           "date": "Mar 24",
@@ -509,6 +521,12 @@
           "name": "Jessica Zaidman",
           "amount": 50.0,
           "platform": "venmo"
+        },
+        {
+          "date": "Mar 26",
+          "name": "Adam Brody",
+          "amount": 100,
+          "platform": "stripe"
         }
       ]
     },
