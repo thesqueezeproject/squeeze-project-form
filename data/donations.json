@@ -578,10 +578,11 @@
     "remi": {
       "name": "Remi Newman",
       "camp": "Camp Tyler Hill",
-      "color": "#1a5276",
+      "color": "#1e3a8a",
       "goal": 2250,
       "raised": 0,
-      "donations": []
+      "donations": [],
+      "logo": "https://i.imgur.com/19ea8C7.jpeg"
     }
   }
 }
