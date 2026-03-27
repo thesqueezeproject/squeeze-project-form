@@ -1,5 +1,5 @@
 {
-  "grand_total": 7868,
+  "grand_total": 7968,
   "goal": 13500,
   "ambassadors": {
     "luke": {
@@ -448,7 +448,7 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 1400,
+      "raised": 1500,
       "donations": [
         {
           "date": "Mar 24",
@@ -574,6 +574,12 @@
           "date": "Mar 27",
           "name": "Alexander M. Brody",
           "amount": 150,
+          "platform": "stripe"
+        },
+        {
+          "date": "Mar 27",
+          "name": "Janine Loewy",
+          "amount": 100,
           "platform": "stripe"
         }
       ]
