@@ -1,5 +1,5 @@
 {
-  "grand_total": 8043,
+  "grand_total": 8143,
   "goal": 13500,
   "ambassadors": {
     "luke": {
@@ -265,7 +265,7 @@
       "camp": "Camp Wah-Nee",
       "color": "#8B1A1A",
       "goal": 2250,
-      "raised": 1910,
+      "raised": 2010,
       "donations": [
         {
           "date": "Mar 25",
@@ -451,6 +451,12 @@
           "date": "Mar 27",
           "name": "Lauren Mintz",
           "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Mar 27",
+          "name": "Ruth Salis",
+          "amount": 100,
           "platform": "venmo"
         }
       ]
