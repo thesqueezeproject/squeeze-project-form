@@ -1,5 +1,5 @@
 {
-  "grand_total": 8179,
+  "grand_total": 8429,
   "goal": 13500,
   "ambassadors": {
     "luke": {
@@ -265,7 +265,7 @@
       "camp": "Camp Wah-Nee",
       "color": "#8B1A1A",
       "goal": 2250,
-      "raised": 2010,
+      "raised": 2260,
       "donations": [
         {
           "date": "Mar 25",
@@ -457,6 +457,12 @@
           "date": "Mar 27",
           "name": "Ruth Salis",
           "amount": 100,
+          "platform": "venmo"
+        },
+        {
+          "date": "Mar 27",
+          "name": "Becca Zipkin",
+          "amount": 250,
           "platform": "venmo"
         }
       ]
