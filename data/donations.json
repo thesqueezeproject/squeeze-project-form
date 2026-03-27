@@ -1,6 +1,6 @@
 {
   "updated": "2026-03-25",
-  "grand_total": 5864,
+  "grand_total": 6486,
   "goal": 11250,
   "ambassadors": {
     "luke": {
@@ -8,7 +8,7 @@
       "goal": 2250
     },
     "tessa": {
-      "raised": 1028,
+      "raised": 1528,
       "goal": 2250
     },
     "ben": {
@@ -16,11 +16,11 @@
       "goal": 2250
     },
     "jordana": {
-      "raised": 965,
+      "raised": 1015,
       "goal": 2250
     },
     "parker": {
-      "raised": 249,
+      "raised": 321,
       "goal": 2250
     }
   }
