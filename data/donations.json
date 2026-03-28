@@ -1,5 +1,5 @@
 {
-  "grand_total": 8738,
+  "grand_total": 8774,
   "goal": 14750,
   "ambassadors": {
     "luke": {
@@ -490,7 +490,7 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 1564,
+      "raised": 1600,
       "donations": [
         {
           "date": "Mar 24",
@@ -640,6 +640,12 @@
           "date": "Mar 28",
           "name": "Amy Endelson",
           "amount": 18,
+          "platform": "venmo"
+        },
+        {
+          "date": "Mar 28",
+          "name": "Brooke Fisher",
+          "amount": 36,
           "platform": "venmo"
         }
       ]
