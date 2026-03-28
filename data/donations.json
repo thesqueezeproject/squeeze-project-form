@@ -1,6 +1,6 @@
 {
   "grand_total": 8582,
-  "goal": 14250,
+  "goal": 14500,
   "ambassadors": {
     "luke": {
       "name": "Luke & Aria Kerman",
@@ -129,7 +129,7 @@
       "name": "Tessa Forman",
       "camp": "Camp Pontiac",
       "color": "#CC0000",
-      "goal": 2250,
+      "goal": 2500,
       "raised": 2300,
       "donations": [
         {
