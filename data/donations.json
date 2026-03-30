@@ -1,5 +1,5 @@
 {
-  "grand_total": 9672,
+  "grand_total": 9772,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -526,7 +526,7 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 1780,
+      "raised": 1880,
       "donations": [
         {
           "date": "Mar 24",
@@ -689,6 +689,12 @@
           "name": "Karen Rosenfield",
           "amount": 180,
           "platform": "venmo"
+        },
+        {
+          "date": "Mar 30",
+          "name": "Bari Margolis",
+          "amount": 100,
+          "platform": "stripe"
         }
       ]
     },
