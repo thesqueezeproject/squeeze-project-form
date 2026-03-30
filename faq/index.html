@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q&A — The Squeeze Project</title>
+  <link rel="icon" href="/favicon.ico">
+  <meta name="robots" content="noindex">
+  <style>
+    :root { --green:#1a4f30; --light:#f5f9f6; --cream:#faf8f3; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:var(--cream); color:var(--green); }
+    header { background:var(--green); padding:24px 20px; text-align:center; }
+    header a { text-decoration:none; display:inline-flex; align-items:center; gap:12px; }
+    header img { height:40px; border-radius:50%; }
+    header span { color:white; font-size:18px; font-weight:800; }
+    .hero { background:var(--green); padding:48px 20px 56px; text-align:center; color:white; }
+    .hero h1 { font-size:36px; font-weight:900; margin-bottom:12px; }
+    .hero p { font-size:16px; color:rgba(255,255,255,.75); max-width:520px; margin:0 auto; line-height:1.6; }
+    .faq-wrap { max-width:720px; margin:-24px auto 60px; padding:0 20px; }
+    .faq-item { background:white; border-radius:14px; margin-bottom:14px; box-shadow:0 2px 10px rgba(0,0,0,.06); overflow:hidden; }
+    .faq-q { padding:20px 24px; font-size:16px; font-weight:700; color:var(--green); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:12px; user-select:none; }
+    .faq-q:hover { background:var(--light); }
+    .faq-q .arrow { flex-shrink:0; width:24px; height:24px; background:var(--light); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; transition:transform .25s; }
+    .faq-item.open .faq-q .arrow { transform:rotate(180deg); }
+    .faq-a { display:none; padding:16px 24px 22px; font-size:15px; line-height:1.75; color:#3a5040; border-top:1px solid #edf3ef; }
+    .faq-item.open .faq-a { display:block; }
+    .faq-a p + p { margin-top:12px; }
+    footer { background:var(--green); color:rgba(255,255,255,.6); text-align:center; padding:32px 20px; font-size:13px; line-height:1.8; }
+    footer a { color:rgba(255,255,255,.75); }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/"><img src="/logo.jpg" alt="The Squeeze Project"><span>The Squeeze Project</span></a>
+</header>
+<div class="hero">
+  <h1>Questions &amp; Answers</h1>
+  <p>Honest answers to the questions we hear most often.</p>
+</div>
+<div class="faq-wrap">
+  <div class="faq-item">
+    <div class="faq-q">Is The Squeeze Project associated with or affiliated with another company?<span class="arrow">▼</span></div>
+    <div class="faq-a">No. The Squeeze Project is a standalone organization. It was created as its own charitable project and is not owned by, operated by, or affiliated with any other company.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Does anyone get paid a salary, fee, or consulting payment before profits are donated?<span class="arrow">▼</span></div>
+    <div class="faq-a">No. No one receives any salary, consulting fee, or compensation of any kind for their work with The Squeeze Project.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How much money will you donate?<span class="arrow">▼</span></div>
+    <div class="faq-a">The honest answer is that we do not know yet. Our goal is to raise as much money as possible for SCOPE, but we are still early in the process and do not want to make promises before we have real results.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">If you sell a toy for $10, how much goes to SCOPE?<span class="arrow">▼</span></div>
+    <div class="faq-a">
+      <p>It depends on how the toy is sold, but our goal is always to keep expenses as low as possible so that as much money as we can goes to SCOPE.</p>
+      <p>Like any organization, we do have some costs — things like the cost to make the product, packaging, shipping, payment processing fees, website costs, and basic administrative expenses. We are committed to keeping those costs to a minimum.</p>
+      <p>If we sell a toy on our website for $10, we hope that after the product cost and other small expenses, a large portion of that sale will be available to donate. If we sell to a retail store or camp store, the numbers work differently — we may sell at a lower wholesale price, and the store sells to customers at the higher retail price. Because of that, the amount available to donate can vary depending on the sales channel.</p>
+      <p>What we can promise is this: <strong>we are committed to transparency.</strong> We plan to publicly share our sales, expenses, and donations so people can clearly see how the money is being used and how much is going to SCOPE.</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>The Squeeze Project · 100 Jericho Quadrangle, Suite 230 · Jericho, NY</p>
+  <p><a href="https://thesqueezeproject.com">thesqueezeproject.com</a> · <a href="mailto:hello@thesqueezeproject.com">hello@thesqueezeproject.com</a></p>
+  <p style="margin-top:8px;">501(c)(3) status pending</p>
+</footer>
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => q.closest('.faq-item').classList.toggle('open')));
+</script>
+</body>
+</html>
