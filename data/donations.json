@@ -1,5 +1,5 @@
 {
-  "grand_total": 10292.0,
+  "grand_total": 10498.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -7,7 +7,7 @@
       "camp": "Camp IHC",
       "color": "#4A6FA5",
       "goal": 3000,
-      "raised": 3000.0,
+      "raised": 3136.0,
       "donations": [
         {
           "date": "Mar 24",
@@ -170,6 +170,18 @@
           "name": "Scott Lebovitz",
           "amount": 270.0,
           "platform": "venmo"
+        },
+        {
+          "date": "Apr 7",
+          "name": "Betsy Swersky",
+          "amount": 100.0,
+          "platform": "stripe"
+        },
+        {
+          "date": "Apr 10",
+          "name": "Stavroula Krasilovsky",
+          "amount": 36.0,
+          "platform": "stripe"
         }
       ]
     },
@@ -178,7 +190,7 @@
       "camp": "Camp Pontiac",
       "color": "#CC0000",
       "goal": 2500,
-      "raised": 2350,
+      "raised": 2420.0,
       "donations": [
         {
           "date": "Mar 24",
@@ -311,6 +323,18 @@
           "name": "Beth Javeline",
           "amount": 50,
           "platform": "venmo"
+        },
+        {
+          "date": "Apr 10",
+          "name": "Deana Rose",
+          "amount": 20.0,
+          "platform": "stripe"
+        },
+        {
+          "date": "Apr 11",
+          "name": "Sari Krantz",
+          "amount": 50.0,
+          "platform": "stripe"
         }
       ]
     },
