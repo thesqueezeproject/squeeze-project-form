@@ -1,5 +1,5 @@
 {
-  "grand_total": 10498.0,
+  "grand_total": 10568.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -802,7 +802,7 @@
       "camp": "Tyler Hill Camp",
       "color": "#1e3a8a",
       "goal": 2250,
-      "raised": 220,
+      "raised": 290.0,
       "donations": [
         {
           "date": "Mar 28",
@@ -820,6 +820,18 @@
           "date": "Mar 29",
           "name": "Brian Newman",
           "amount": 100,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 12",
+          "name": "Allyson Stumacher",
+          "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 12",
+          "name": "Tammy Weisenthal",
+          "amount": 20,
           "platform": "venmo"
         }
       ],
