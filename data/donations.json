@@ -1,5 +1,5 @@
 {
-  "grand_total": 10743.0,
+  "grand_total": 10748.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -860,8 +860,15 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 0,
-      "donations": [],
+      "raised": 5.0,
+      "donations": [
+        {
+          "date": "Apr 16",
+          "name": "Shari Kessler",
+          "amount": 5,
+          "platform": "venmo"
+        }
+      ],
       "logo": "/img/camp-towanda-logo.jpg"
     }
   }
