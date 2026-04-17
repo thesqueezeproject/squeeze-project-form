@@ -1,5 +1,5 @@
 {
-  "grand_total": 12233.0,
+  "grand_total": 12333.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -866,7 +866,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 1440.0,
+      "raised": 1540.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1052,6 +1052,12 @@
           "date": "Apr 17",
           "name": "Lauren Dworkin",
           "amount": 18,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 17",
+          "name": "Martin Small",
+          "amount": 100,
           "platform": "venmo"
         }
       ],
