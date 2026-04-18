@@ -1,5 +1,5 @@
 {
-  "grand_total": 12703.0,
+  "grand_total": 12803.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -866,7 +866,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 1910.0,
+      "raised": 2010.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1118,6 +1118,12 @@
           "date": "Apr 18",
           "name": "Jessica Zaidman",
           "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 18",
+          "name": "Jennifer Auerbach",
+          "amount": 100,
           "platform": "venmo"
         }
       ],
