@@ -1,5 +1,5 @@
 {
-  "grand_total": 12821.0,
+  "grand_total": 12839.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -866,7 +866,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 2028.0,
+      "raised": 2046.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1129,6 +1129,12 @@
         {
           "date": "Apr 18",
           "name": "Elena Ridloff",
+          "amount": 18,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 18",
+          "name": "Pam Burstein",
           "amount": 18,
           "platform": "venmo"
         }
