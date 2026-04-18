@@ -1,5 +1,5 @@
 {
-  "grand_total": 12492.0,
+  "grand_total": 12517.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -866,7 +866,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 1699.0,
+      "raised": 1724.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1089,6 +1089,12 @@
           "name": "Carly Laffie",
           "amount": 50,
           "platform": "stripe"
+        },
+        {
+          "date": "Apr 18",
+          "name": "Bari Shapiro",
+          "amount": 25,
+          "platform": "venmo"
         }
       ],
       "logo": "/img/camp-towanda-logo.jpg"
