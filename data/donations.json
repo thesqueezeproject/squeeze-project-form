@@ -1,5 +1,5 @@
 {
-  "grand_total": 13293.0,
+  "grand_total": 13329.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -866,7 +866,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 2500.0,
+      "raised": 2536.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1196,6 +1196,12 @@
           "date": "Apr 19",
           "name": "Carolyn Spungin",
           "amount": 18,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 19",
+          "name": "Megan Bernstein",
+          "amount": 36,
           "platform": "venmo"
         }
       ],
