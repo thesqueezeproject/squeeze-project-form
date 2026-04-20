@@ -1,5 +1,5 @@
 {
-  "grand_total": 13773.0,
+  "grand_total": 13839.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -568,7 +568,7 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 2070.0,
+      "raised": 2100.0,
       "donations": [
         {
           "date": "Mar 24",
@@ -755,6 +755,12 @@
           "name": "Beth Brody",
           "amount": 40,
           "platform": "stripe"
+        },
+        {
+          "date": "Apr 19",
+          "name": "Jessica Broth",
+          "amount": 30,
+          "platform": "venmo"
         }
       ]
     },
@@ -872,7 +878,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 2940.0,
+      "raised": 2976.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1262,6 +1268,12 @@
           "date": "Apr 19",
           "name": "Alexa Penziner",
           "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 19",
+          "name": "Evan Krakauer",
+          "amount": 36,
           "platform": "venmo"
         }
       ],
