@@ -1,5 +1,5 @@
 {
-  "grand_total": 13989.0,
+  "grand_total": 14025.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -896,7 +896,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 2976.0,
+      "raised": 3012.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1291,6 +1291,12 @@
         {
           "date": "Apr 19",
           "name": "Evan Krakauer",
+          "amount": 36,
+          "platform": "venmo"
+        },
+        {
+          "date": "Apr 20",
+          "name": "Susan Gelman",
           "amount": 36,
           "platform": "venmo"
         }
