@@ -1,5 +1,5 @@
 {
-  "grand_total": 14290.0,
+  "grand_total": 14340.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -908,7 +908,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 3223.0,
+      "raised": 3273.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1347,6 +1347,12 @@
           "name": "Jarret Kerman",
           "amount": 50,
           "platform": "zelle"
+        },
+        {
+          "date": "Apr 24",
+          "name": "Kerry Ederer",
+          "amount": 50,
+          "platform": "venmo"
         }
       ],
       "logo": "/img/camp-towanda-logo.jpg"
