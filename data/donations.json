@@ -1,5 +1,5 @@
 {
-  "grand_total": 14365.0,
+  "grand_total": 14385.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -7,7 +7,7 @@
       "camp": "Camp IHC",
       "color": "#4A6FA5",
       "goal": 3000,
-      "raised": 3136.0,
+      "raised": 3156.0,
       "donations": [
         {
           "date": "Mar 24",
@@ -182,6 +182,13 @@
           "name": "Stavroula Krasilovsky",
           "amount": 36.0,
           "platform": "stripe"
+        },
+        {
+          "date": "Apr 23",
+          "name": "Lauren Schneidman",
+          "amount": 20,
+          "platform": "stripe",
+          "note": "rentals"
         }
       ]
     },
