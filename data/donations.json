@@ -1,5 +1,5 @@
 {
-  "grand_total": 14835.0,
+  "grand_total": 14885.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -832,7 +832,7 @@
       "camp": "Tyler Hill Camp",
       "color": "#1e3a8a",
       "goal": 2250,
-      "raised": 689.0,
+      "raised": 739.0,
       "donations": [
         {
           "date": "Mar 28",
@@ -915,6 +915,12 @@
         {
           "date": "Apr 29",
           "name": "Juliana Gross",
+          "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "May 4",
+          "name": "Marcia Bateman",
           "amount": 50,
           "platform": "venmo"
         }
