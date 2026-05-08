@@ -1,5 +1,5 @@
 {
-  "grand_total": 14885.0,
+  "grand_total": 14921.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -343,7 +343,7 @@
       "camp": "Camp Wah-Nee",
       "color": "#8B1A1A",
       "goal": 3000,
-      "raised": 2371,
+      "raised": 2371.0,
       "donations": [
         {
           "date": "Mar 25",
@@ -787,7 +787,7 @@
       "camp": "Camp Pontiac",
       "color": "#CC0000",
       "goal": 2250,
-      "raised": 321,
+      "raised": 321.0,
       "donations": [
         {
           "date": "Mar 25",
@@ -932,7 +932,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 3648.0,
+      "raised": 3684.0,
       "donations": [
         {
           "date": "Apr 16",
@@ -1394,6 +1394,12 @@
           "date": "Apr 29",
           "name": "Lauren Krauss",
           "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "May 7",
+          "name": "Melissa Twersky",
+          "amount": 36,
           "platform": "venmo"
         }
       ],
