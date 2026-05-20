@@ -2,7 +2,7 @@
 import json, sys
 from pathlib import Path
 
-path = Path('/Users/Milo/Projects/squeeze-project-form/data/donations.json')
+path = Path(__file__).resolve().parent.parent / 'data' / 'donations.json'
 data = json.loads(path.read_text())
 errors = []
 ambassadors = data.get('ambassadors', {})
