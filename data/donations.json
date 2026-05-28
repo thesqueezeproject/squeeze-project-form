@@ -1,5 +1,5 @@
 {
-  "grand_total": 14946.0,
+  "grand_total": 15457.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -838,7 +838,7 @@
       "camp": "Tyler Hill Camp",
       "color": "#1e3a8a",
       "goal": 2250,
-      "raised": 739.0,
+      "raised": 1250.0,
       "donations": [
         {
           "date": "Mar 28",
@@ -929,6 +929,12 @@
           "name": "Marcia Bateman",
           "amount": 50,
           "platform": "venmo"
+        },
+        {
+          "date": "May 27",
+          "name": "Gregory Newman",
+          "amount": 511.0,
+          "platform": "stripe"
         }
       ],
       "logo": "https://i.imgur.com/19ea8C7.jpeg"
