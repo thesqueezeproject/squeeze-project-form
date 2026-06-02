@@ -1,5 +1,5 @@
 {
-  "grand_total": 15537.0,
+  "grand_total": 15587.0,
   "goal": 15250,
   "ambassadors": {
     "luke": {
@@ -850,7 +850,7 @@
       "camp": "Tyler Hill Camp",
       "color": "#1e3a8a",
       "goal": 2250,
-      "raised": 1250.0,
+      "raised": 1300.0,
       "donations": [
         {
           "date": "Mar 28",
@@ -947,6 +947,12 @@
           "name": "Gregory Newman",
           "amount": 511.0,
           "platform": "stripe"
+        },
+        {
+          "date": "May 31",
+          "name": "Elizabeth Miller",
+          "amount": 50.0,
+          "platform": "venmo"
         }
       ],
       "logo": "https://i.imgur.com/19ea8C7.jpeg"
