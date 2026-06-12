@@ -1434,6 +1434,15 @@
         }
       ],
       "logo": "/img/camp-towanda-logo.jpg"
+    },
+    "lucas": {
+      "name": "Lucas Goldman",
+      "camp": "Camp Timber Lake",
+      "color": "#1f5d2c",
+      "goal": 2250,
+      "raised": 0.0,
+      "donations": [],
+      "logo": "/img/camp-timber-lake-logo.jpg"
     }
   }
 }
