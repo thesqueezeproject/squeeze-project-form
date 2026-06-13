@@ -1,5 +1,5 @@
 {
-  "grand_total": 15857.0,
+  "grand_total": 15907,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -7,108 +7,108 @@
       "camp": "Camp IHC",
       "color": "#4A6FA5",
       "goal": 3000,
-      "raised": 3236.0,
+      "raised": 3236,
       "donations": [
         {
           "date": "Mar 24",
           "name": "jayson@license-2-play.com",
-          "amount": 500.0,
+          "amount": 500,
           "platform": "stripe"
         },
         {
           "date": "Mar 24",
           "name": "Jarret Kerman",
-          "amount": 10.0,
+          "amount": 10,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Brooke Jung",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Melanie Ringold",
-          "amount": 54.0,
+          "amount": 54,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Jarret Kerman",
-          "amount": 200.0,
+          "amount": 200,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Von Maur Foundation",
-          "amount": 250.0,
+          "amount": 250,
           "platform": "check"
         },
         {
           "date": "Mar 25",
           "name": "David Brown",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "zelle"
         },
         {
           "date": "Mar 25",
           "name": "Craig Brown",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Kevin Saliba",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Jaclyn Bobson",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Randi Goodman",
-          "amount": 54.0,
+          "amount": 54,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Anna Spitzer",
-          "amount": 54.0,
+          "amount": 54,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Ilana Yunis",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Melissa Schoenfeld",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Lisa Merlob",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Alissa Dwek",
-          "amount": 40.0,
+          "amount": 40,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Steven Schneider",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
@@ -168,25 +168,25 @@
         {
           "date": "Apr 11",
           "name": "Scott Lebovitz",
-          "amount": 270.0,
+          "amount": 270,
           "platform": "venmo"
         },
         {
           "date": "Apr 7",
           "name": "Betsy Swersky",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "stripe"
         },
         {
           "date": "Apr 10",
           "name": "Stavroula Krasilovsky",
-          "amount": 36.0,
+          "amount": 36,
           "platform": "stripe"
         },
         {
           "date": "Jun 8",
           "name": "Erin Cohen",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         }
       ]
@@ -196,108 +196,108 @@
       "camp": "Camp Pontiac",
       "color": "#CC0000",
       "goal": 2400,
-      "raised": 2500.0,
+      "raised": 2500,
       "donations": [
         {
           "date": "Mar 24",
           "name": "Allison Slansky",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Annabelle Greenberg",
-          "amount": 15.0,
+          "amount": 15,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Joshua Henkel",
-          "amount": 36.0,
+          "amount": 36,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Jen Seiden",
-          "amount": 36.0,
+          "amount": 36,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Robyn Kreiner",
-          "amount": 36.0,
+          "amount": 36,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Erica Polavieja",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Marissa Drogin",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Cori Zummo",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Lindsey Schnepper",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 24",
           "name": "Christine Schwartz",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "stripe"
         },
         {
           "date": "Mar 24",
           "name": "sarimskier@gmail.com",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Jen Schwartz",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Tracy Paley",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "masetheace728@icloud.com",
-          "amount": 5.0,
+          "amount": 5,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Stage to Screen",
-          "amount": 250.0,
+          "amount": 250,
           "platform": "check"
         },
         {
           "date": "Mar 25",
           "name": "Rose (1)",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "check"
         },
         {
           "date": "Mar 25",
           "name": "Rose (2)",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "check"
         },
         {
@@ -333,25 +333,25 @@
         {
           "date": "Apr 10",
           "name": "Deana Rose",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "stripe"
         },
         {
           "date": "Apr 11",
           "name": "Sari Krantz",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "stripe"
         },
         {
           "date": "May 30",
           "name": "Erica Merlis",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "May 31",
           "name": "Gene Forman",
-          "amount": 30.0,
+          "amount": 30,
           "platform": "venmo"
         }
       ]
@@ -361,186 +361,186 @@
       "camp": "Camp Wah-Nee",
       "color": "#8B1A1A",
       "goal": 3000,
-      "raised": 2371.0,
+      "raised": 2371,
       "donations": [
         {
           "date": "Mar 25",
           "name": "Jayson Siano",
-          "amount": 200.0,
+          "amount": 200,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Jessica Zipkin",
-          "amount": 150.0,
+          "amount": 150,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Stephanie Barilan",
-          "amount": 150.0,
+          "amount": 150,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Evane Klein",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Dana Block",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Jessica Goldstein",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Jessica Greenwald",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Jaclyn Vida",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Alyse Stern",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "ali horowitz",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Dina Goldberg",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Liz Beler",
-          "amount": 40.0,
+          "amount": 40,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Elizabeth Zorn",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Michael Jacobson",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Erica Oliver",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Robyn Sachnoff",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Jennifer Brogadir",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Ellen Jacobson",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Joey Stella",
-          "amount": 200.0,
+          "amount": 200,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Carrie Grochow",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Rebecca Brogadir",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Alison Enis",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Stacey Selenfriend",
-          "amount": 15.0,
+          "amount": 15,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Kelly Hershkowitz",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "stripe"
         },
         {
           "date": "Mar 25",
           "name": "Sam Knepper",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Andrew Salis",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Randi Fagen",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Brittany Garavelli",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Shaiya",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Stephanie Newman",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "stripe"
         },
         {
@@ -586,90 +586,90 @@
       "camp": "Camp Westmont",
       "color": "#1a2744",
       "goal": 2250,
-      "raised": 2275.0,
+      "raised": 2275,
       "donations": [
         {
           "date": "Mar 24",
           "name": "Evan Krakauer",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "hallie polsky",
-          "amount": 36.0,
+          "amount": 36,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Alexa Scalzi",
-          "amount": 30.0,
+          "amount": 30,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Jaimee Manger",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Karen Ganz",
-          "amount": 18.0,
+          "amount": 18,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Debbi Kauffman",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Jan Mirman",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Beth Brody",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Steve Kreinik",
-          "amount": 250.0,
+          "amount": 250,
           "platform": "zelle"
         },
         {
           "date": "Mar 25",
           "name": "Eileen Linde",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Pamela Mohr",
-          "amount": 36.0,
+          "amount": 36,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "The Taub Family",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Lisa Taub",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "stripe"
         },
         {
           "date": "Mar 26",
           "name": "Jessica Zaidman",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
@@ -811,42 +811,42 @@
       "camp": "Camp Pontiac",
       "color": "#CC0000",
       "goal": 2250,
-      "raised": 321.0,
+      "raised": 321,
       "donations": [
         {
           "date": "Mar 25",
           "name": "Jason Hornig",
-          "amount": 25.0,
+          "amount": 25,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Meredith Wellen",
-          "amount": 36.0,
+          "amount": 36,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Meredith Wellen",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         },
         {
           "date": "Mar 25",
           "name": "Lindsay Koonin",
-          "amount": 118.0,
+          "amount": 118,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Lindsay Buchel",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "venmo"
         },
         {
           "date": "Mar 26",
           "name": "Greg Wellen",
-          "amount": 72.0,
+          "amount": 72,
           "platform": "venmo"
         }
       ]
@@ -856,7 +856,7 @@
       "camp": "Tyler Hill Camp",
       "color": "#1e3a8a",
       "goal": 2250,
-      "raised": 1300.0,
+      "raised": 1300,
       "donations": [
         {
           "date": "Mar 28",
@@ -951,13 +951,13 @@
         {
           "date": "May 27",
           "name": "Gregory Newman",
-          "amount": 511.0,
+          "amount": 511,
           "platform": "stripe"
         },
         {
           "date": "May 31",
           "name": "Elizabeth Miller",
-          "amount": 50.0,
+          "amount": 50,
           "platform": "venmo"
         }
       ],
@@ -968,7 +968,7 @@
       "camp": "Camp Towanda",
       "color": "#2f6f6f",
       "goal": 2250,
-      "raised": 3684.0,
+      "raised": 3684,
       "donations": [
         {
           "date": "Apr 16",
@@ -1446,24 +1446,30 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 170.0,
+      "raised": 220,
       "donations": [
         {
           "date": "Jun 12",
           "name": "Phyllis Goldman",
-          "amount": 20.0,
+          "amount": 20,
           "platform": "venmo"
         },
         {
           "date": "Jun 12",
           "name": "Jennifer Sherman",
-          "amount": 100.0,
+          "amount": 100,
           "platform": "venmo"
         },
         {
           "date": "Jun 12",
           "name": "Jaime Linder",
-          "amount": 50.0,
+          "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Jun 13",
+          "name": "Heather Phillips",
+          "amount": 50,
           "platform": "venmo"
         }
       ],
