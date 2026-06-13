@@ -15,6 +15,19 @@ const REPO_NAME  = 'squeeze-project-form';
 const DATA_PATH  = 'data/donations.json';
 const BRANCH     = 'main';
 
+// Mapping from Stripe payment-link URL identifier → ambassador key.
+// URL identifier = last segment of https://buy.stripe.com/...
+const STRIPE_LINK_TO_AMBASSADOR = {
+  '3cIbJ08ed1TX7q9fyY24000': 'luke',
+  '7sYbJ03XX1TX6m5dqQ24001': 'tessa',
+  'dRm14meCB425aCl1I824002': 'ben',
+  '00wcN4fGFfKN39TdqQ24003': 'parker',
+  '6oU8wO1PPgOR6m59aA24004': 'jordana',
+  'cNifZg1PPbux7q94Uk24005': 'remi',
+  '14AdR82TT7eh6m586w24006': 'ashley',
+  '3cI4gybqp2Y1eSB72s24007': 'lucas',
+};
+
 // Used by /parse — the LLM call. Sonnet 4.6 is a good vision/structured-output
 // balance; swap to claude-haiku-4-5-20251001 if you want lower per-parse cost.
 const PARSE_MODEL = 'claude-sonnet-4-6';
@@ -43,6 +56,8 @@ export default {
       if (request.method === 'GET' && path === '/state') return await getState(env);
       if (request.method === 'POST' && path === '/parse') return await parseImage(request, env);
       if (request.method === 'POST' && path === '/commit') return await commitDonation(request, env);
+      if (request.method === 'GET' && path === '/stripe-sync') return await stripeSync(env);
+      if (request.method === 'POST' && path === '/stripe-commit') return await stripeCommitBatch(request, env);
       return json({ error: 'not found' }, 404);
     } catch (err) {
       return json({ error: String(err && err.message || err) }, 500);
@@ -225,6 +240,152 @@ async function commitDonation(request, env) {
   });
 }
 
+// ───────── Stripe sync ─────────
+
+async function stripeSync(env) {
+  const stripeKey = await getEnv('STRIPE_API_KEY', env);
+  if (!stripeKey) return json({ error: 'STRIPE_API_KEY not configured in Secrets Store' }, 500);
+
+  // 1) Fetch payment_links to map plink_id → ambassador via the URL identifier.
+  const plRes = await fetch('https://api.stripe.com/v1/payment_links?limit=100', {
+    headers: { Authorization: `Bearer ${stripeKey}` },
+  });
+  if (!plRes.ok) {
+    const t = await plRes.text();
+    return json({ error: `Stripe payment_links: ${plRes.status} ${t}` }, 502);
+  }
+  const plData = await plRes.json();
+  const plinkIdToAmbassador = {};
+  for (const pl of plData.data || []) {
+    const m = pl.url && pl.url.match(/buy\.stripe\.com\/(.+?)\/?$/);
+    if (!m) continue;
+    const amb = STRIPE_LINK_TO_AMBASSADOR[m[1]];
+    if (amb) plinkIdToAmbassador[pl.id] = amb;
+  }
+
+  // 2) Fetch recent successful checkout sessions (last 30 days).
+  const since = Math.floor(Date.now() / 1000) - (30 * 24 * 60 * 60);
+  const csUrl = `https://api.stripe.com/v1/checkout/sessions?limit=100&created[gte]=${since}`;
+  const csRes = await fetch(csUrl, { headers: { Authorization: `Bearer ${stripeKey}` } });
+  if (!csRes.ok) {
+    const t = await csRes.text();
+    return json({ error: `Stripe checkout_sessions: ${csRes.status} ${t}` }, 502);
+  }
+  const csData = await csRes.json();
+
+  // 3) Build donation candidates.
+  const candidates = [];
+  for (const s of csData.data || []) {
+    if (s.payment_status !== 'paid') continue;
+    if (!s.payment_link) continue;
+    const amb = plinkIdToAmbassador[s.payment_link];
+    if (!amb) continue;
+    const name = (s.customer_details && (s.customer_details.name || s.customer_details.email)) || 'Unknown';
+    const amount = round2((s.amount_total || 0) / 100);
+    if (amount <= 0) continue;
+    candidates.push({
+      ambassador_key: amb,
+      date: formatStripeDate(s.created),
+      name,
+      amount,
+      platform: 'stripe',
+      _session_id: s.id,
+      _created: s.created,
+    });
+  }
+
+  // 4) Cross-reference against existing donations.json — skip ones already recorded.
+  const { content } = await fetchDonations(env);
+  const seen = new Set();
+  for (const [key, ambData] of Object.entries(content.ambassadors || {})) {
+    for (const d of ambData.donations || []) {
+      if (d.platform === 'stripe') {
+        seen.add(`${key}|${(d.name || '').toLowerCase().trim()}|${d.amount}`);
+      }
+    }
+  }
+  const newOnes = candidates.filter(c =>
+    !seen.has(`${c.ambassador_key}|${c.name.toLowerCase().trim()}|${c.amount}`)
+  );
+
+  // Sort newest first for display
+  newOnes.sort((a, b) => (b._created || 0) - (a._created || 0));
+
+  return json({
+    new_count: newOnes.length,
+    checked: (csData.data || []).length,
+    candidates: newOnes.map(c => ({
+      ambassador_key: c.ambassador_key,
+      ambassador_name: (content.ambassadors[c.ambassador_key] || {}).name || c.ambassador_key,
+      date: c.date,
+      name: c.name,
+      amount: c.amount,
+      platform: 'stripe',
+    })),
+  });
+}
+
+async function stripeCommitBatch(request, env) {
+  const body = await request.json().catch(() => ({}));
+  const items = Array.isArray(body.items) ? body.items : [];
+  if (!items.length) return json({ error: 'no items' }, 400);
+
+  const { content, sha } = await fetchDonations(env);
+
+  // Re-dedupe at commit time in case anything changed between preview and commit.
+  const seen = new Set();
+  for (const [key, ambData] of Object.entries(content.ambassadors || {})) {
+    for (const d of ambData.donations || []) {
+      if (d.platform === 'stripe') {
+        seen.add(`${key}|${(d.name || '').toLowerCase().trim()}|${d.amount}`);
+      }
+    }
+  }
+
+  let added = 0;
+  const addedDetail = [];
+  for (const it of items) {
+    if (!it.ambassador_key || !it.name || typeof it.amount !== 'number') continue;
+    const k = `${it.ambassador_key}|${(it.name || '').toLowerCase().trim()}|${it.amount}`;
+    if (seen.has(k)) continue;
+    const amb = content.ambassadors[it.ambassador_key];
+    if (!amb) continue;
+    amb.donations = amb.donations || [];
+    amb.donations.push({
+      date: it.date || todayLabel(),
+      name: it.name,
+      amount: it.amount,
+      platform: 'stripe',
+    });
+    amb.raised = round2((amb.raised || 0) + it.amount);
+    content.grand_total = round2((content.grand_total || 0) + it.amount);
+    seen.add(k);
+    added++;
+    addedDetail.push(`${it.name} → ${it.ambassador_key} ($${it.amount})`);
+  }
+
+  if (added === 0) return json({ added: 0, message: 'No new donations (all already in donations.json)' });
+
+  const err = validate(content);
+  if (err) return json({ error: `validation failed: ${err}` }, 400);
+
+  const msg =
+    `Batch ${added} Stripe donations via mobile admin\n\n` +
+    addedDetail.map(d => '- ' + d).join('\n') +
+    `\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>`;
+  await putDonations(env, content, sha, msg);
+  return json({ added, grand_total: content.grand_total });
+}
+
+function formatStripeDate(unixSec) {
+  const d = new Date((unixSec || 0) * 1000);
+  if (isNaN(d.getTime())) return todayLabel();
+  const fmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York', month: 'short', day: 'numeric',
+  });
+  return fmt.format(d);
+}
+
 // ───────── Validation (ported from scripts/validate-donations.py) ─────────
 
 function validate(data) {
@@ -396,6 +557,18 @@ button:disabled { opacity:0.5; cursor:not-allowed; }
     </label>
     <div class="status info" style="margin-top:14px;">
       The screenshot is parsed by Claude and pre-fills the donation form. You can edit any field before submitting.
+    </div>
+    <button class="btn-secondary" style="margin-top:14px;" onclick="syncStripe()" id="syncStripeBtn">💳 Sync Stripe payments</button>
+  </div>
+
+  <!-- STRIPE SYNC SCREEN -->
+  <div id="stripeSync" class="hidden">
+    <div class="card">
+      <h2>Stripe Sync</h2>
+      <div id="stripeStatus" class="status info">Checking Stripe…</div>
+      <div id="stripeList"></div>
+      <button class="btn-primary hidden" id="stripeAddAllBtn" onclick="stripeAddAll()">Add All</button>
+      <button class="btn-ghost" onclick="restart()">← Back</button>
     </div>
   </div>
 
@@ -604,10 +777,79 @@ function showReviewErr(msg) {
 function restart() {
   document.getElementById('review').classList.add('hidden');
   document.getElementById('success').classList.add('hidden');
+  document.getElementById('stripeSync').classList.add('hidden');
   document.getElementById('upload').classList.remove('hidden');
   document.getElementById('fileInput').value = '';
   imageBlob = null;
   populateAmbassadors();
+}
+
+let stripeCandidates = [];
+
+async function syncStripe() {
+  document.getElementById('upload').classList.add('hidden');
+  document.getElementById('stripeSync').classList.remove('hidden');
+  const status = document.getElementById('stripeStatus');
+  const list = document.getElementById('stripeList');
+  const addAll = document.getElementById('stripeAddAllBtn');
+  status.className = 'status info';
+  status.textContent = 'Checking Stripe for new payments…';
+  list.innerHTML = '';
+  addAll.classList.add('hidden');
+
+  try {
+    const r = await fetch(API_BASE + '/stripe-sync', { headers: { authorization: 'Bearer ' + passcode } });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || 'sync failed');
+    stripeCandidates = j.candidates || [];
+    if (stripeCandidates.length === 0) {
+      status.className = 'status ok';
+      status.textContent = 'Up to date — no new Stripe payments in the last 30 days (' + (j.checked || 0) + ' checked).';
+      return;
+    }
+    status.className = 'status info';
+    status.textContent = 'Found ' + stripeCandidates.length + ' new Stripe payment(s) — review and tap Add All.';
+    list.innerHTML = stripeCandidates.map((c, i) => '<div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px;"><div style="font-weight:800;color:var(--dark);font-size:15px;">' + escapeHtml(c.name) + ' · ' + dollar(c.amount) + '</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">' + escapeHtml(c.ambassador_name) + ' · ' + escapeHtml(c.date) + '</div></div>').join('');
+    addAll.classList.remove('hidden');
+    addAll.textContent = 'Add All (' + stripeCandidates.length + ')';
+  } catch (e) {
+    status.className = 'status err';
+    status.textContent = (e && e.message) ? String(e.message).slice(0, 200) : 'Stripe sync failed';
+  }
+}
+
+async function stripeAddAll() {
+  const btn = document.getElementById('stripeAddAllBtn');
+  const status = document.getElementById('stripeStatus');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Adding…';
+  try {
+    const r = await fetch(API_BASE + '/stripe-commit', {
+      method: 'POST',
+      headers: { authorization: 'Bearer ' + passcode, 'content-type': 'application/json' },
+      body: JSON.stringify({ items: stripeCandidates }),
+    });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || 'commit failed');
+    status.className = 'status ok';
+    status.textContent = 'Added ' + (j.added || 0) + ' donation(s). Grand total: ' + dollar(j.grand_total || 0);
+    document.getElementById('stripeList').innerHTML = '';
+    btn.classList.add('hidden');
+    // Refresh state
+    const sr = await fetch(API_BASE + '/state', { headers: { authorization: 'Bearer ' + passcode } });
+    state = await sr.json();
+    populateAmbassadors();
+  } catch (e) {
+    status.className = 'status err';
+    status.textContent = (e && e.message) ? String(e.message).slice(0, 200) : 'commit failed';
+  } finally {
+    btn.disabled = false;
+    if (!btn.classList.contains('hidden')) btn.textContent = 'Add All (' + stripeCandidates.length + ')';
+  }
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 </script>
 </body>
