@@ -1,5 +1,5 @@
 {
-  "grand_total": 16535,
+  "grand_total": 16553,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 848,
+      "raised": 866,
       "donations": [
         {
           "date": "Jun 12",
@@ -1542,6 +1542,12 @@
           "date": "Jun 16",
           "name": "Francine Schiff",
           "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Jun 17",
+          "name": "Abby Silverman",
+          "amount": 18,
           "platform": "venmo"
         }
       ],
