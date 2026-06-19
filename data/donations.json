@@ -1,5 +1,5 @@
 {
-  "grand_total": 16783,
+  "grand_total": 16833,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1096,
+      "raised": 1146,
       "donations": [
         {
           "date": "Jun 12",
@@ -1561,6 +1561,12 @@
           "name": "Andrea Weber",
           "amount": 30,
           "platform": "venmo"
+        },
+        {
+          "date": "Jun 19",
+          "name": "Jaimee Schultz",
+          "amount": 50,
+          "platform": "stripe"
         }
       ],
       "logo": "/img/camp-timber-lake-logo.jpg"
