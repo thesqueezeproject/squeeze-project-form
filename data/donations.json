@@ -1,5 +1,5 @@
 {
-  "grand_total": 16833,
+  "grand_total": 16908,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1146,
+      "raised": 1221,
       "donations": [
         {
           "date": "Jun 12",
@@ -1566,6 +1566,12 @@
           "date": "Jun 19",
           "name": "Jaimee Schultz",
           "amount": 50,
+          "platform": "stripe"
+        },
+        {
+          "date": "Jun 19",
+          "name": "Lawrence Helfant",
+          "amount": 75,
           "platform": "stripe"
         }
       ],
