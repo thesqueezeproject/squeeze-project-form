@@ -1,5 +1,5 @@
 {
-  "grand_total": 16928,
+  "grand_total": 16964,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1241,
+      "raised": 1277,
       "donations": [
         {
           "date": "Jun 12",
@@ -1578,6 +1578,12 @@
           "date": "Jun 20",
           "name": "Randi Stanley",
           "amount": 20,
+          "platform": "venmo"
+        },
+        {
+          "date": "Jun 20",
+          "name": "Danielle Klier Beer",
+          "amount": 36,
           "platform": "venmo"
         }
       ],
