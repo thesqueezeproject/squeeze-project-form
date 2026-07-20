@@ -1,5 +1,5 @@
 {
-  "grand_total": 16964,
+  "grand_total": 17014,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1277,
+      "raised": 1327,
       "donations": [
         {
           "date": "Jun 12",
@@ -1584,6 +1584,12 @@
           "date": "Jun 20",
           "name": "Danielle Klier Beer",
           "amount": 36,
+          "platform": "venmo"
+        },
+        {
+          "date": "Jul 20",
+          "name": "Melissa Hirsch",
+          "amount": 50,
           "platform": "venmo"
         }
       ],
