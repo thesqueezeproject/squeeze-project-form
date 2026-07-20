@@ -1,5 +1,5 @@
 {
-  "grand_total": 17064,
+  "grand_total": 17114,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1377,
+      "raised": 1427,
       "donations": [
         {
           "date": "Jun 12",
@@ -1595,6 +1595,12 @@
         {
           "date": "Jul 20",
           "name": "Marissa Dillmann",
+          "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Jul 20",
+          "name": "Diane Zizzadoro",
           "amount": 50,
           "platform": "venmo"
         }
