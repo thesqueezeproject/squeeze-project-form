@@ -1,5 +1,5 @@
 {
-  "grand_total": 17139,
+  "grand_total": 17239,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1452,
+      "raised": 1552,
       "donations": [
         {
           "date": "Jun 12",
@@ -1608,6 +1608,12 @@
           "date": "Jul 21",
           "name": "Regina Lopez",
           "amount": 25,
+          "platform": "venmo"
+        },
+        {
+          "date": "Jul 21",
+          "name": "Brian Galler",
+          "amount": 100,
           "platform": "venmo"
         }
       ],
