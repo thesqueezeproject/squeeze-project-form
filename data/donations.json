@@ -1,5 +1,5 @@
 {
-  "grand_total": 17639,
+  "grand_total": 17664,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1952,
+      "raised": 1977,
       "donations": [
         {
           "date": "Jun 12",
@@ -1626,6 +1626,12 @@
           "date": "Jul 29",
           "name": "Jodi Romano",
           "amount": 100,
+          "platform": "venmo"
+        },
+        {
+          "date": "Jul 29",
+          "name": "Deborah Dubowsky",
+          "amount": 25,
           "platform": "venmo"
         }
       ],
