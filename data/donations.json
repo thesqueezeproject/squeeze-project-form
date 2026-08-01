@@ -1,5 +1,5 @@
 {
-  "grand_total": 17664,
+  "grand_total": 17684,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 1977,
+      "raised": 1997,
       "donations": [
         {
           "date": "Jun 12",
@@ -1632,6 +1632,12 @@
           "date": "Jul 29",
           "name": "Deborah Dubowsky",
           "amount": 25,
+          "platform": "venmo"
+        },
+        {
+          "date": "Aug 1",
+          "name": "Phyllis Goldman",
+          "amount": 20,
           "platform": "venmo"
         }
       ],
