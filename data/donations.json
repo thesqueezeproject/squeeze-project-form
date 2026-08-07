@@ -1,5 +1,5 @@
 {
-  "grand_total": 17734,
+  "grand_total": 17744,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 2047,
+      "raised": 2057,
       "donations": [
         {
           "date": "Jun 12",
@@ -1644,6 +1644,12 @@
           "date": "Aug 6",
           "name": "Phyllis Goldman",
           "amount": 50,
+          "platform": "venmo"
+        },
+        {
+          "date": "Aug 7",
+          "name": "Marissa Galler",
+          "amount": 10,
           "platform": "venmo"
         }
       ],
