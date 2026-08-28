@@ -1,5 +1,5 @@
 {
-  "grand_total": 17764,
+  "grand_total": 17939,
   "goal": 17500,
   "ambassadors": {
     "luke": {
@@ -1446,7 +1446,7 @@
       "camp": "Timber Lake Camp",
       "color": "#1f5d2c",
       "goal": 2250,
-      "raised": 2077,
+      "raised": 2252,
       "donations": [
         {
           "date": "Jun 12",
@@ -1656,6 +1656,12 @@
           "date": "Aug 7",
           "name": "TARA Weiss",
           "amount": 20,
+          "platform": "venmo"
+        },
+        {
+          "date": "Aug 28",
+          "name": "Phyllis Goldman",
+          "amount": 175,
           "platform": "venmo"
         }
       ],
