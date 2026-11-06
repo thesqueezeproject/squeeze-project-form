@@ -133,7 +133,15 @@ fetch('/data/donations.json').then(r=>r.json()).then(d=>{
   document.getElementById('raisedAmt').textContent = '$'+raised.toLocaleString();
   document.getElementById('progressFill').style.width = pct+'%';
   document.getElementById('pct').textContent = pct+'%';
-  document.getElementById('remaining').textContent = '$'+(goal-raised).toLocaleString();
+  const remEl = document.getElementById('remaining');
+  if (raised > goal) {
+    const wrap = remEl.parentElement;
+    wrap.textContent = 'Goal reached!';
+    wrap.style.color = 'var(--green)';
+    wrap.style.fontWeight = '800';
+  } else {
+    remEl.textContent = '$'+(goal-raised).toLocaleString();
+  }
 }).catch(()=>{});
 </script>
 </body>

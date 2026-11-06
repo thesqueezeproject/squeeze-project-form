@@ -167,7 +167,14 @@ fetch('/data/donations.json').then(r=>r.json()).then(d=>{
   if(rEl) rEl.textContent = '$'+raised.toLocaleString();
   if(fEl) fEl.style.width = pct+'%';
   if(pEl) pEl.textContent = pct+'%';
-  if(remEl) remEl.textContent = '$'+(goal-raised).toLocaleString();
+  if (raised > goal) {
+    const wrap = remEl.parentElement;
+    wrap.textContent = 'Goal reached!';
+    wrap.style.color = 'var(--green)';
+    wrap.style.fontWeight = '800';
+  } else {
+    remEl.textContent = '$'+(goal-raised).toLocaleString();
+  }
 }).catch(()=>{});
 </script>
 </body>
